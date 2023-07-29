@@ -1,0 +1,2785 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-budgeting-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">e-budgeting-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  ActionWorkflowComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/component/action-workflow/action-workflow.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-action-workflow</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./action-workflow.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./action-workflow.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#authService" >authService</a>
+                            </li>
+                            <li>
+                                <a href="#budgetLogHistory" >budgetLogHistory</a>
+                            </li>
+                            <li>
+                                <a href="#budgetWorkflowInfo" >budgetWorkflowInfo</a>
+                            </li>
+                            <li>
+                                <a href="#closeButtonOptions" >closeButtonOptions</a>
+                            </li>
+                            <li>
+                                <a href="#defaultVisible" >defaultVisible</a>
+                            </li>
+                            <li>
+                                <a href="#employeeListDataSource" >employeeListDataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#globalService" >globalService</a>
+                            </li>
+                            <li>
+                                <a href="#hrEmployees" >hrEmployees</a>
+                            </li>
+                            <li>
+                                <a href="#isPBCPMRole" >isPBCPMRole</a>
+                            </li>
+                            <li>
+                                <a href="#popUpTitle" >popUpTitle</a>
+                            </li>
+                            <li>
+                                <a href="#popupVisible" >popupVisible</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#route" >route</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                            <li>
+                                <a href="#saveButtonOptions" >saveButtonOptions</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover10Id" >selectedApprover10Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover1Id" >selectedApprover1Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover2Id" >selectedApprover2Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover3Id" >selectedApprover3Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover4Id" >selectedApprover4Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover5Id" >selectedApprover5Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover6Id" >selectedApprover6Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover7Id" >selectedApprover7Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover8Id" >selectedApprover8Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedApprover9Id" >selectedApprover9Id</a>
+                            </li>
+                            <li>
+                                <a href="#selectedPbcpmId" >selectedPbcpmId</a>
+                            </li>
+                            <li>
+                                <a href="#selectedPreparerId" >selectedPreparerId</a>
+                            </li>
+                            <li>
+                                <a href="#sessionUser" >sessionUser</a>
+                            </li>
+                            <li>
+                                <a href="#unsubscribe$" >unsubscribe$</a>
+                            </li>
+                            <li>
+                                <a href="#workflowArray" >workflowArray</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBudgetLogHistoryInfo" >getBudgetLogHistoryInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBudgetWorkflowInfo" >getBudgetWorkflowInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getHrEmployees" >getHrEmployees</a>
+                            </li>
+                            <li>
+                                <a href="#initDropdownValue" >initDropdownValue</a>
+                            </li>
+                            <li>
+                                <a href="#load" >load</a>
+                            </li>
+                            <li>
+                                <a href="#nextStepForward" >nextStepForward</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#updateWorkflow" >updateWorkflow</a>
+                            </li>
+                            <li>
+                                <a href="#userChanged" >userChanged</a>
+                            </li>
+                            <li>
+                                <a href="#workFlowEditPopUp" >workFlowEditPopUp</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#budgetId" >budgetId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(spinner: NgxSpinnerService, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, globalService: <a href="../injectables/GlobalService.html" target="_self">GlobalService</a>, pbcpmService: <a href="../injectables/PbcpmService.html" target="_self">PbcpmService</a>, router: Router, route: ActivatedRoute, commonSettingService: <a href="../injectables/CommonSettingService.html" target="_self">CommonSettingService</a>, expenseService: <a href="../injectables/ExpenseService.html" target="_self">ExpenseService</a>, budgetService: <a href="../injectables/BudgetService.html" target="_self">BudgetService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>spinner</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgxSpinnerService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>pbcpmService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PbcpmService.html" target="_self" >PbcpmService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonSettingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonSettingService.html" target="_self" >CommonSettingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>expenseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExpenseService.html" target="_self" >ExpenseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>budgetService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BudgetService.html" target="_self" >BudgetService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="budgetId"></a>
+                        <b>budgetId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:31</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetLogHistoryInfo"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getBudgetLogHistoryInfo</b></span>
+                        <a href="#getBudgetLogHistoryInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBudgetLogHistoryInfo(bdgtId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bdgtId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetWorkflowInfo"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getBudgetWorkflowInfo</b></span>
+                        <a href="#getBudgetWorkflowInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBudgetWorkflowInfo(bdgtId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bdgtId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getHrEmployees"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getHrEmployees</b></span>
+                        <a href="#getHrEmployees"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getHrEmployees()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:227</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initDropdownValue"></a>
+                    <span class="name">
+                        <span ><b>initDropdownValue</b></span>
+                        <a href="#initDropdownValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initDropdownValue()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="212"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:212</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="load"></a>
+                    <span class="name">
+                        <span ><b>load</b></span>
+                        <a href="#load"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>load()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:103</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextStepForward"></a>
+                    <span class="name">
+                        <span ><b>nextStepForward</b></span>
+                        <a href="#nextStepForward"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>nextStepForward()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateWorkflow"></a>
+                    <span class="name">
+                        <span ><b>updateWorkflow</b></span>
+                        <a href="#updateWorkflow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateWorkflow()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="279"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:279</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userChanged"></a>
+                    <span class="name">
+                        <span ><b>userChanged</b></span>
+                        <a href="#userChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>userChanged(data, userRole)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>userRole</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="workFlowEditPopUp"></a>
+                    <span class="name">
+                        <span ><b>workFlowEditPopUp</b></span>
+                        <a href="#workFlowEditPopUp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>workFlowEditPopUp()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:171</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>authService</b></span>
+                        <a href="#authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="budgetLogHistory"></a>
+                    <span class="name">
+                        <span ><b>budgetLogHistory</b></span>
+                        <a href="#budgetLogHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="budgetWorkflowInfo"></a>
+                    <span class="name">
+                        <span ><b>budgetWorkflowInfo</b></span>
+                        <a href="#budgetWorkflowInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeButtonOptions"></a>
+                    <span class="name">
+                        <span ><b>closeButtonOptions</b></span>
+                        <a href="#closeButtonOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defaultVisible"></a>
+                    <span class="name">
+                        <span ><b>defaultVisible</b></span>
+                        <a href="#defaultVisible"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="employeeListDataSource"></a>
+                    <span class="name">
+                        <span ><b>employeeListDataSource</b></span>
+                        <a href="#employeeListDataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ArrayStore</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>globalService</b></span>
+                        <a href="#globalService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hrEmployees"></a>
+                    <span class="name">
+                        <span ><b>hrEmployees</b></span>
+                        <a href="#hrEmployees"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPBCPMRole"></a>
+                    <span class="name">
+                        <span ><b>isPBCPMRole</b></span>
+                        <a href="#isPBCPMRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="popUpTitle"></a>
+                    <span class="name">
+                        <span ><b>popUpTitle</b></span>
+                        <a href="#popUpTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="popupVisible"></a>
+                    <span class="name">
+                        <span ><b>popupVisible</b></span>
+                        <a href="#popupVisible"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="route"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>route</b></span>
+                        <a href="#route"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ActivatedRoute</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Router</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveButtonOptions"></a>
+                    <span class="name">
+                        <span ><b>saveButtonOptions</b></span>
+                        <a href="#saveButtonOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover10Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover10Id</b></span>
+                        <a href="#selectedApprover10Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover1Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover1Id</b></span>
+                        <a href="#selectedApprover1Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover2Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover2Id</b></span>
+                        <a href="#selectedApprover2Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover3Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover3Id</b></span>
+                        <a href="#selectedApprover3Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover4Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover4Id</b></span>
+                        <a href="#selectedApprover4Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover5Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover5Id</b></span>
+                        <a href="#selectedApprover5Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover6Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover6Id</b></span>
+                        <a href="#selectedApprover6Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover7Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover7Id</b></span>
+                        <a href="#selectedApprover7Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover8Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover8Id</b></span>
+                        <a href="#selectedApprover8Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedApprover9Id"></a>
+                    <span class="name">
+                        <span ><b>selectedApprover9Id</b></span>
+                        <a href="#selectedApprover9Id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedPbcpmId"></a>
+                    <span class="name">
+                        <span ><b>selectedPbcpmId</b></span>
+                        <a href="#selectedPbcpmId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedPreparerId"></a>
+                    <span class="name">
+                        <span ><b>selectedPreparerId</b></span>
+                        <a href="#selectedPreparerId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sessionUser"></a>
+                    <span class="name">
+                        <span ><b>sessionUser</b></span>
+                        <a href="#sessionUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unsubscribe$"></a>
+                    <span class="name">
+                        <span ><b>unsubscribe$</b></span>
+                        <a href="#unsubscribe$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subject&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="workflowArray"></a>
+                    <span class="name">
+                        <span ><b>workflowArray</b></span>
+                        <a href="#workflowArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/workflowModel.html" target="_self" >workflowModel[]</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/component/action-workflow/action-workflow.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { WorkFlow } from &#x27;./../../models/workflow-dto.model&#x27;;
+import { BudgetFlowMaster } from &#x27;./../../models/budgetFlowMaster-dto.model&#x27;;
+import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { NgxSpinnerService } from &#x27;ngx-spinner&#x27;;
+import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
+import { BudgetService } from &#x27;src/app/services/budget/budget.service&#x27;;
+import { CommonSettingService } from &#x27;src/app/services/common-setting/common-setting.service&#x27;;
+import { ExpenseService } from &#x27;src/app/services/expense/expense.service&#x27;;
+import { GlobalService } from &#x27;src/app/services/global/global.service&#x27;;
+import { PbcpmService } from &#x27;src/app/services/pbcpm/pbcpm.service&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { takeUntil } from &#x27;rxjs/operators&#x27;;
+import ArrayStore from &quot;devextreme/data/array_store&quot;;
+import Swal from &#x27;sweetalert2&#x27;;
+
+export class workflowModel {
+  flow_id: any;
+  flow_name: any;
+  employee_id: any;
+  employee_name: any;
+  employee_cmnt: any;
+  employee_details: any;
+}
+@Component({
+  selector: &#x27;app-action-workflow&#x27;,
+  templateUrl: &#x27;./action-workflow.component.html&#x27;,
+  styleUrls: [&#x27;./action-workflow.component.css&#x27;]
+})
+export class ActionWorkflowComponent implements OnInit {
+  @Input() budgetId;
+  unsubscribe$: Subject&lt;boolean&gt; &#x3D; new Subject();
+  sessionUser: any;
+  budgetWorkflowInfo: any;
+  workflowArray: workflowModel[];
+  defaultVisible: boolean &#x3D; false;
+  budgetLogHistory: any &#x3D; [];
+  popupVisible &#x3D; false;
+  hrEmployees: any &#x3D; [];
+
+  employeeListDataSource: ArrayStore;
+  selectedPreparerId: any &#x3D; [];
+  selectedApprover1Id: any[];
+  selectedApprover2Id: any[];
+  selectedApprover3Id: any[];
+  selectedApprover4Id: any[];
+  selectedApprover5Id: any[];
+  selectedApprover6Id: any[];
+  selectedApprover7Id: any[];
+  selectedApprover8Id: any[];
+  selectedApprover9Id: any[];
+  selectedApprover10Id: any[];
+  selectedPbcpmId: any[];
+  saveButtonOptions: { icon: string; text: string; onClick(e: any): void; };
+  closeButtonOptions: { text: string; onClick(e: any): void; };
+  popUpTitle: string;
+  isPBCPMRole: boolean;
+
+  constructor(private spinner: NgxSpinnerService,
+    public authService: AuthService,
+    public globalService: GlobalService,
+    private pbcpmService: PbcpmService,
+    public router: Router,
+    public route: ActivatedRoute,
+    private commonSettingService: CommonSettingService,
+    private expenseService: ExpenseService,
+    private budgetService: BudgetService) {
+    this.sessionUser &#x3D; this.authService.getSessionUser();
+    this.isPBCPMRole &#x3D; this.authService.isPBCPM();
+
+  }
+
+  ngOnInit(): void {
+    const that &#x3D; this;
+    this.popUpTitle &#x3D; &quot;Workflow for Budget - &quot; + this.budgetId;
+    console.log(&#x27;app-action-workflow&#x27;)
+    this.load();
+    // For reload the UI with any action.
+    this.budgetService
+      .getWorkFlowUILoadObs()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((result) &#x3D;&gt; {
+        if (result) {
+          this.load();
+        }
+      });
+
+    this.saveButtonOptions &#x3D; {
+      icon: &#x27;&#x27;,
+      text: &#x27;Save&#x27;,
+      onClick(e) {
+
+      },
+    };
+    this.closeButtonOptions &#x3D; {
+      text: &#x27;Close&#x27;,
+      onClick(e) {
+        that.popupVisible &#x3D; false;
+      },
+    };
+  }
+
+  load() {
+    this.getBudgetWorkflowInfo(this.budgetId);
+    this.getBudgetLogHistoryInfo(this.budgetId);
+    this.getHrEmployees();
+  }
+  ngOnDestroy() {
+    this.unsubscribe$.next(true);
+    this.unsubscribe$.complete();
+  }
+
+  async getBudgetWorkflowInfo(bdgtId) {
+    //this.globalService.showSpinner(true);
+    (await this.budgetService.getBudgetWorkflowInfoBy(bdgtId)).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          // this.programList &#x3D; result.resultset;
+          this.budgetWorkflowInfo &#x3D; result.result;
+          console.log(this.budgetWorkflowInfo);
+
+          let dataArray: workflowModel[] &#x3D; [];
+
+          if (this.budgetWorkflowInfo.preparerId &gt; 0) dataArray.push({ flow_id: &#x27;0&#x27;, flow_name: &#x27;Preparer&#x27;, employee_id: this.budgetWorkflowInfo.preparerId, employee_name: this.budgetWorkflowInfo.preparerName, employee_cmnt: this.budgetWorkflowInfo.preparerCmt, employee_details: this.budgetWorkflowInfo.preparerDetails })
+          if (this.budgetWorkflowInfo.approver1Id &gt; 0) dataArray.push({ flow_id: &#x27;1&#x27;, flow_name: &#x27;Approver 1&#x27;, employee_id: this.budgetWorkflowInfo.approver1Id, employee_name: this.budgetWorkflowInfo.approver1Name, employee_cmnt: this.budgetWorkflowInfo.approver1Cmt, employee_details: this.budgetWorkflowInfo.approver1Details })
+          if (this.budgetWorkflowInfo.approver2Id &gt; 0) dataArray.push({ flow_id: &#x27;2&#x27;, flow_name: &#x27;Approver 2&#x27;, employee_id: this.budgetWorkflowInfo.approver2Id, employee_name: this.budgetWorkflowInfo.approver2Name, employee_cmnt: this.budgetWorkflowInfo.approver2Cmt, employee_details: this.budgetWorkflowInfo.approver2Details })
+          if (this.budgetWorkflowInfo.approver3Id &gt; 0) dataArray.push({ flow_id: &#x27;3&#x27;, flow_name: &#x27;Approver 3&#x27;, employee_id: this.budgetWorkflowInfo.approver3Id, employee_name: this.budgetWorkflowInfo.approver3Name, employee_cmnt: this.budgetWorkflowInfo.approver3Cmt, employee_details: this.budgetWorkflowInfo.approver3Details })
+          if (this.budgetWorkflowInfo.approver4Id &gt; 0) dataArray.push({ flow_id: &#x27;4&#x27;, flow_name: &#x27;Approver 4&#x27;, employee_id: this.budgetWorkflowInfo.approver4Id, employee_name: this.budgetWorkflowInfo.approver4Name, employee_cmnt: this.budgetWorkflowInfo.approver4Cmt, employee_details: this.budgetWorkflowInfo.approver4Details })
+          if (this.budgetWorkflowInfo.approver5Id &gt; 0) dataArray.push({ flow_id: &#x27;5&#x27;, flow_name: &#x27;Approver 5&#x27;, employee_id: this.budgetWorkflowInfo.approver5Id, employee_name: this.budgetWorkflowInfo.approver5Name, employee_cmnt: this.budgetWorkflowInfo.approver5Cmt, employee_details: this.budgetWorkflowInfo.approver5Details })
+          if (this.budgetWorkflowInfo.approver6Id &gt; 0) dataArray.push({ flow_id: &#x27;6&#x27;, flow_name: &#x27;Approver 6&#x27;, employee_id: this.budgetWorkflowInfo.approver6Id, employee_name: this.budgetWorkflowInfo.approver6Name, employee_cmnt: this.budgetWorkflowInfo.approver6Cmt, employee_details: this.budgetWorkflowInfo.approver6Details })
+          if (this.budgetWorkflowInfo.approver7Id &gt; 0) dataArray.push({ flow_id: &#x27;7&#x27;, flow_name: &#x27;Approver 7&#x27;, employee_id: this.budgetWorkflowInfo.approver7Id, employee_name: this.budgetWorkflowInfo.approver7Name, employee_cmnt: this.budgetWorkflowInfo.approver7Cmt, employee_details: this.budgetWorkflowInfo.approver7Details })
+          if (this.budgetWorkflowInfo.approver8Id &gt; 0) dataArray.push({ flow_id: &#x27;8&#x27;, flow_name: &#x27;Approver 8&#x27;, employee_id: this.budgetWorkflowInfo.approver8Id, employee_name: this.budgetWorkflowInfo.approver8Name, employee_cmnt: this.budgetWorkflowInfo.approver8Cmt, employee_details: this.budgetWorkflowInfo.approver8Details })
+          if (this.budgetWorkflowInfo.approver9Id &gt; 0) dataArray.push({ flow_id: &#x27;9&#x27;, flow_name: &#x27;Approver 9&#x27;, employee_id: this.budgetWorkflowInfo.approver9Id, employee_name: this.budgetWorkflowInfo.approver9Name, employee_cmnt: this.budgetWorkflowInfo.approver9Cmt, employee_details: this.budgetWorkflowInfo.approver9Details })
+          if (this.budgetWorkflowInfo.approver10Id &gt; 0) dataArray.push({ flow_id: &#x27;10&#x27;, flow_name: &#x27;Approver 10&#x27;, employee_id: this.budgetWorkflowInfo.approver10Id, employee_name: this.budgetWorkflowInfo.approver10Name, employee_cmnt: this.budgetWorkflowInfo.approver10Cmt, employee_details: this.budgetWorkflowInfo.approver10Details })
+          if (this.budgetWorkflowInfo.pbcpmId &gt; 0) dataArray.push({ flow_id: &#x27;11&#x27;, flow_name: &#x27;PBCPM&#x27;, employee_id: this.budgetWorkflowInfo.pbcpmId, employee_name: this.budgetWorkflowInfo.pbcpmName, employee_cmnt: this.budgetWorkflowInfo.pbcpmCmt, employee_details: this.budgetWorkflowInfo.pbcpmDetails })
+          if (this.budgetWorkflowInfo.pbcpmId &gt; 0) dataArray.push({ flow_id: &#x27;12&#x27;, flow_name: &#x27;Approve&#x27;, employee_id: &quot;&quot;, employee_name: &quot;&quot;, employee_cmnt: &quot;&quot;, employee_details: &quot;&quot; })
+
+          this.workflowArray &#x3D; dataArray;
+          console.log(this.workflowArray);
+
+          this.initDropdownValue();
+        }
+      },
+      (err) &#x3D;&gt; {
+        //this.globalService.showSpinner(false);
+        console.log(err);
+      }
+    );
+  }
+
+  async getBudgetLogHistoryInfo(bdgtId) {
+    //this.globalService.showSpinner(true);
+    (await this.budgetService.getBudgetLogHistoryBy(bdgtId)).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          // this.programList &#x3D; result.resultset;
+          this.budgetLogHistory &#x3D; result.result;
+          console.log(this.budgetLogHistory);
+
+
+
+        }
+      },
+      (err) &#x3D;&gt; {
+        //this.globalService.showSpinner(false);
+        console.log(err);
+      }
+    );
+  }
+
+  workFlowEditPopUp() {
+    this.popupVisible &#x3D; true;
+    this.initDropdownValue();
+  }
+
+  nextStepForward() {
+    console.log(&#x27;next step move&#x27;);
+
+    Swal.fire({
+      title: &#x27;Are you sure?&#x27;,
+      text: &#x27;You want to move to the next level?&#x27;,
+      icon: &#x27;warning&#x27;,
+      showCancelButton: true,
+      cancelButtonText: &#x27;No&#x27;,
+      confirmButtonColor: &#x27;#3085d6&#x27;,
+      cancelButtonColor: &#x27;#d33&#x27;,
+      confirmButtonText: &#x27;Yes, Do it!&#x27;,
+    }).then((result) &#x3D;&gt; {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        this.globalService.showSpinner(true);
+        this.budgetService.workflowStepChange(this.budgetId, &#x27;next&#x27;, -1).subscribe(result &#x3D;&gt; {
+          if (result.statusCode &#x3D;&#x3D; 200) {
+            console.log(result.result);
+            this.globalService.showSpinner(false);
+
+            this.budgetService.setWorkFlowUILoadObs(true);
+            this.globalService.showSwal(&#x27;Success&#x27;, &#x27;Succesfully Move the workflow to the next approver for budget: &#x27; + this.budgetId, &#x27;success&#x27;);
+
+          }
+
+        }, err &#x3D;&gt; {
+          this.globalService.showSpinner(false);
+
+          console.log(err);
+        })
+      }
+    });
+
+  }
+
+  initDropdownValue() {
+    this.selectedPreparerId &#x3D; [this.budgetWorkflowInfo.preparerId];
+    this.selectedApprover1Id &#x3D; [this.budgetWorkflowInfo.approver1Id];
+    this.selectedApprover2Id &#x3D; [this.budgetWorkflowInfo.approver2Id];
+    this.selectedApprover3Id &#x3D; [this.budgetWorkflowInfo.approver3Id];
+    this.selectedApprover4Id &#x3D; [this.budgetWorkflowInfo.approver4Id];
+    this.selectedApprover5Id &#x3D; [this.budgetWorkflowInfo.approver5Id];
+    this.selectedApprover6Id &#x3D; [this.budgetWorkflowInfo.approver6Id];
+    this.selectedApprover7Id &#x3D; [this.budgetWorkflowInfo.approver7Id];
+    this.selectedApprover8Id &#x3D; [this.budgetWorkflowInfo.approver8Id];
+    this.selectedApprover9Id &#x3D; [this.budgetWorkflowInfo.approver9Id];
+    this.selectedApprover10Id &#x3D; [this.budgetWorkflowInfo.approver10Id];
+    this.selectedPbcpmId &#x3D; [this.budgetWorkflowInfo.pbcpmId];
+  }
+
+  async getHrEmployees() {
+    //this.globalService.showSpinner(true);
+    (await this.commonSettingService.getHrEmployees()).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          // this.programList &#x3D; result.resultset;
+          this.employeeListDataSource &#x3D; new ArrayStore({
+            data: result.result,
+            key: &quot;hrEmployeeid&quot;,
+          });
+        }
+      },
+      (err) &#x3D;&gt; {
+        //this.globalService.showSpinner(false);
+        console.log(err);
+      }
+    );
+  }
+
+  userChanged(data, userRole) {
+    // console.log(&#x27;dropdown data changed&#x27;);
+    // console.log(data);
+    if (data.value &#x3D;&#x3D; null) {
+      if (userRole &#x3D;&#x3D; 0) this.selectedPreparerId &#x3D; [];
+      if (userRole &#x3D;&#x3D; 1) this.selectedApprover1Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 2) this.selectedApprover2Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 3) this.selectedApprover3Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 4) this.selectedApprover4Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 5) this.selectedApprover5Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 6) this.selectedApprover6Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 7) this.selectedApprover7Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 8) this.selectedApprover8Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 9) this.selectedApprover9Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 10) this.selectedApprover10Id &#x3D; [];
+      if (userRole &#x3D;&#x3D; 11) this.selectedPbcpmId &#x3D; [];
+    }
+    if (userRole &#x3D;&#x3D; 0) this.budgetWorkflowInfo.preparerId &#x3D; this.selectedPreparerId[0];
+    if (userRole &#x3D;&#x3D; 1) this.budgetWorkflowInfo.approver1Id &#x3D; this.selectedApprover1Id[0];
+    if (userRole &#x3D;&#x3D; 2) this.budgetWorkflowInfo.approver2Id &#x3D; this.selectedApprover2Id[0];
+    if (userRole &#x3D;&#x3D; 3) this.budgetWorkflowInfo.approver3Id &#x3D; this.selectedApprover3Id[0];
+    if (userRole &#x3D;&#x3D; 4) this.budgetWorkflowInfo.approver4Id &#x3D; this.selectedApprover4Id[0];
+    if (userRole &#x3D;&#x3D; 5) this.budgetWorkflowInfo.approver5Id &#x3D; this.selectedApprover5Id[0];
+    if (userRole &#x3D;&#x3D; 6) this.budgetWorkflowInfo.approver6Id &#x3D; this.selectedApprover6Id[0];
+    if (userRole &#x3D;&#x3D; 7) this.budgetWorkflowInfo.approver7Id &#x3D; this.selectedApprover7Id[0];
+    if (userRole &#x3D;&#x3D; 8) this.budgetWorkflowInfo.approver8Id &#x3D; this.selectedApprover8Id[0];
+    if (userRole &#x3D;&#x3D; 9) this.budgetWorkflowInfo.approver9Id &#x3D; this.selectedApprover9Id[0];
+    if (userRole &#x3D;&#x3D; 10) this.budgetWorkflowInfo.approver10Id &#x3D; this.selectedApprover10Id[0];
+    if (userRole &#x3D;&#x3D; 11) this.budgetWorkflowInfo.pbcpmId &#x3D; this.selectedPbcpmId[0];
+
+    console.log(this.budgetWorkflowInfo)
+  }
+
+  updateWorkflow() {
+    this.globalService.showSpinner(true);
+    console.log(this.budgetWorkflowInfo);
+    var model: WorkFlow &#x3D; {
+      bgtId: this.budgetWorkflowInfo.budgetId,
+      preparerId: this.budgetWorkflowInfo.preparerId,
+      approver1Id: this.budgetWorkflowInfo.approver1Id,
+      approver2Id: this.budgetWorkflowInfo.approver2Id,
+      approver3Id: this.budgetWorkflowInfo.approver3Id,
+      approver4Id: this.budgetWorkflowInfo.approver4Id,
+      approver5Id: this.budgetWorkflowInfo.approver5Id,
+      approver6Id: this.budgetWorkflowInfo.approver6Id,
+      approver7Id: this.budgetWorkflowInfo.approver7Id,
+      approver8Id: this.budgetWorkflowInfo.approver8Id,
+      approver9Id: this.budgetWorkflowInfo.approver9Id,
+      approver10Id: this.budgetWorkflowInfo.approver10Id,
+      pbcpmId: this.budgetWorkflowInfo.pbcpmId
+    }
+
+
+    this.budgetService.updateWorkflow(model).subscribe(result &#x3D;&gt; {
+      if (result.statusCode &#x3D;&#x3D; 200) {
+        this.globalService.showSpinner(false);
+        this.popupVisible &#x3D; false;
+        this.budgetService.setWorkFlowUILoadObs(true);
+        // this.programList &#x3D; result.resultset;
+        this.globalService.showSwal(&#x27;Success&#x27;, &#x27;Succesfully Update the workflow for budget: &#x27; + this.budgetId, &#x27;success&#x27;);
+
+      }
+    }, err &#x3D;&gt; {
+      console.log(err)
+      this.globalService.showSpinner(false);
+    })
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;margin-top: 2% ;&quot;&gt;
+  &lt;div class&#x3D;&quot;col-11&quot;&gt;
+    &lt;ol class&#x3D;&quot;steps&quot;&gt;
+      &lt;li class&#x3D;&quot;step&quot; [id]&#x3D;&quot;&#x27;id_&#x27; + item.employee_id&quot;
+      [ngClass]&#x3D;&quot;budgetWorkflowInfo.statusid  &#x3D;&#x3D; &#x27;12&#x27; ? &#x27;is-approve&#x27; : item.flow_id &#x3D;&#x3D; budgetWorkflowInfo.statusid ? &#x27;is-active&#x27; : item.flow_id &lt; budgetWorkflowInfo.statusid ? &#x27;is-complete&#x27;: &#x27;step&#x27;&quot;
+        data-step&#x3D;&quot;i&quot; *ngFor&#x3D;&quot;let item of workflowArray; index as i&quot;&gt;
+        {{item.flow_name}}
+        &lt;div *ngIf&#x3D;&quot;(item.flow_id !&#x3D; 12) &amp;&amp; isPBCPMRole &amp;&amp; (item.flow_id &#x3D;&#x3D; budgetWorkflowInfo.statusid)&quot; class&#x3D;&quot;nextStep&quot;&gt;
+          &lt;span&gt;
+            &lt;img  class&#x3D;&quot;icon-size40 cursor&quot; src&#x3D;&quot;./assets/images/next-fance.png&quot; alt&#x3D;&quot;edit&quot; title&#x3D;&quot;Move Next Step&quot;
+              (click)&#x3D;&quot;nextStepForward()&quot;&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;dx-popover *ngIf&#x3D;&quot;item.flow_name !&#x3D; &#x27;Approve&#x27;&quot; [target]&#x3D;&quot;&#x27;#id_&#x27;+item.employee_id&quot; position&#x3D;&quot;top&quot; showEvent&#x3D;&quot;dxhoverstart&quot; hideEvent&#x3D;&quot;dxhoverend&quot;
+          [width]&#x3D;&quot;350&quot;&gt;
+          &lt;div *dxTemplate&#x3D;&quot;let data &#x3D; model; of: &#x27;content&#x27;&quot;&gt;
+            &lt;div class&#x3D;&quot;row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-sm-12&quot;&gt; ID: &lt;span style&#x3D;&quot;font-weight: bold; &quot;&gt;{{item.employee_id}}&lt;/span&gt;&lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-sm-12&quot;&gt; &lt;span style&#x3D;&quot;font-weight: bold; &quot;&gt;{{item.employee_name}},&lt;/span&gt;&lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-sm-12&quot;&gt; &lt;span style&#x3D;&quot;font-weight: bold; &quot;&gt;{{item.employee_details}}&lt;/span&gt;&lt;/div&gt;
+
+              &lt;div class&#x3D;&quot;col-sm-12 mt-3&quot;&gt;Last Comment: &lt;span style&#x3D;&quot;font-weight: bold; &quot;&gt;{{item.employee_cmnt}}&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+
+          &lt;/div&gt;
+        &lt;/dx-popover&gt;
+      &lt;/li&gt;
+
+      &lt;!-- &lt;li class&#x3D;&quot;step&quot; data-step&#x3D;&quot;1&quot;&gt;
+        Approver 1
+      &lt;/li&gt; --&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;col-1&quot; [hidden]&#x3D;&quot;!isPBCPMRole&quot;&gt;
+
+    &lt;span&gt;
+      &lt;img  class&#x3D;&quot;icon-size30 cursor&quot; src&#x3D;&quot;./assets/images/editIcon.png&quot; alt&#x3D;&quot;edit&quot; title&#x3D;&quot;Edit&quot;
+        (click)&#x3D;&quot;workFlowEditPopUp()&quot;&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;dx-popup [showTitle]&#x3D;&quot;true&quot; [title]&#x3D;&quot;popUpTitle&quot; [dragEnabled]&#x3D;&quot;true&quot; [closeOnOutsideClick]&#x3D;&quot;false&quot;
+  [showCloseButton]&#x3D;&quot;true&quot; [(visible)]&#x3D;&quot;popupVisible&quot; &gt;
+  &lt;dxi-toolbar-item  toolbar&#x3D;&quot;bottom&quot; location&#x3D;&quot;after&quot;&gt;
+    &lt;div *dxTemplate&gt;
+      &lt;dx-button  class&#x3D;&quot;themeButton&quot; style&#x3D;&quot;margin: 0 2%;&quot; text&#x3D;&quot;Update&quot; (click)&#x3D;&quot;updateWorkflow()&quot;&gt;&lt;/dx-button&gt;
+    &lt;/div&gt;
+  &lt;/dxi-toolbar-item&gt;
+
+  &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+
+    &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;overflow: auto;height: inherit;&quot;&gt;
+      &lt;div class&#x3D;&quot;col-12&quot;&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Prepared:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedPreparerId&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 0)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedPreparerId&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 1:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover1Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 1)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover1Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 2:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover2Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 2)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover2Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 3:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover3Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 3)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover3Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 4:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover4Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 4)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover4Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 5:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover5Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 5)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover5Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 6:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover6Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 6)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover6Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 7:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover7Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 7)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover7Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 8:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover8Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 8)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover8Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 9:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover9Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 9)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover9Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;Approver 10:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedApprover10Id&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 10)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedApprover10Id&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row workFlowListView&quot;&gt;
+          &lt;div class&#x3D;&quot;col-3&quot;&gt;PBCPM:&lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-9&quot;&gt;
+            &lt;!-- &lt;dx-select-box style&#x3D;&quot;width: 380px;&quot; class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;hrEmployees&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;hrEmployeename&#x27;]&quot;
+              [(ngModel)]&#x3D;&quot;budgetWorkflowInfo.preparerId&quot;&gt;
+            &lt;/dx-select-box&gt; --&gt;
+
+            &lt;dx-drop-down-box [(dataSource)]&#x3D;&quot;employeeListDataSource&quot; [(value)]&#x3D;&quot;selectedPbcpmId&quot; valueExpr&#x3D;&quot;hrEmployeeid&quot;
+              displayExpr&#x3D;&quot;hrEmployeename&quot; placeholder&#x3D;&quot;Select Employee...&quot; [showClearButton]&#x3D;&quot;true&quot;
+              [deferRendering]&#x3D;&quot;false&quot; (onValueChanged)&#x3D;&quot;userChanged($event, 11)&quot;&gt;
+              &lt;div *dxTemplate&#x3D;&quot;let data of &#x27;content&#x27;&quot;&gt;
+                &lt;dx-data-grid keyExpr&#x3D;&quot;hrEmployeeid&quot; [dataSource]&#x3D;&quot;employeeListDataSource&quot;
+                  [selection]&#x3D;&quot;{ mode: &#x27;single&#x27; }&quot;
+                  [hoverStateEnabled]&#x3D;&quot;true&quot; [paging]&#x3D;&quot;{ enabled: true, pageSize: 10 }&quot; [filterRow]&#x3D;&quot;{ visible: true }&quot;
+                  [scrolling]&#x3D;&quot;{ mode: &#x27;infinite&#x27; }&quot; [height]&#x3D;&quot;340&quot; [(selectedRowKeys)]&#x3D;&quot;selectedPbcpmId&quot;&gt;
+
+                  &lt;dxi-column caption&#x3D;&quot;Employee ID&quot; dataField&#x3D;&quot;hrEmployeeid&quot; alignment&#x3D;&quot;right&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Employee Name&quot; dataField&#x3D;&quot;hrEmployeename&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Designation&quot; dataField&#x3D;&quot;hrDesgname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Department&quot; dataField&#x3D;&quot;hrDeptname&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Branch Name&quot; dataField&#x3D;&quot;placeofpostingbmItemnameusers&quot; alignment&#x3D;&quot;center&quot;&gt;
+                  &lt;/dxi-column&gt;
+                &lt;/dx-data-grid&gt;
+              &lt;/div&gt;
+            &lt;/dx-drop-down-box&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/dx-popup&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./action-workflow.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.header-info{
+  font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+
+
+::ng-deep .settings {
+  background-color: rgba(191, 191, 191, 0.15);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 4%;
+}
+
+::ng-deep .settings .column .field {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+::ng-deep .settings .column .field .label {
+  padding-right: 10px;
+}
+
+::ng-deep .settings .column .field .value {
+  width: 200px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+
+
+
+
+
+/*  */
+
+@import &quot;//fonts.googleapis.com/css?family&#x3D;Open+Sans&quot;;
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  color: #929292;
+  height: 4rem;
+}
+.steps &gt; .step {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6D6875;
+}
+.steps &gt; .step:before {
+  content: attr(data-step);
+  display: block;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid #959595;
+  color: #959595 ;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin-bottom: -4.2rem;
+  line-height: 1.9rem;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.steps &gt; .step:after {
+  content: &quot;&quot;;
+  position: absolute;
+  display: block;
+  background: #e6e6e6;
+  width: 100%;
+  height: 0.125rem;
+  top: 1rem;
+  left: 50%;
+}
+.steps &gt; .step:last-child:after {
+  display: none;
+}
+.steps &gt; .step.is-approve {
+  color: #6D6875;
+}
+.steps &gt; .step.is-approve:before {
+  content: &quot;✓&quot;;
+  color: #009688;
+  background: #fef0e2;
+  border: 2px solid #f68e20;
+}
+.steps &gt; .step.is-approve:after {
+  background: #009688;
+}
+
+.steps &gt; .step.is-complete {
+  color: #6D6875;
+}
+.steps &gt; .step.is-complete:before {
+  content: &quot;✓&quot;;
+  color: #f68e20;
+  background: #fef0e2;
+  border: 2px solid #f68e20;
+}
+.steps &gt; .step.is-complete:after {
+  background: #f68e20;
+}
+.steps &gt; .step.is-active {
+  font-size: 1.5rem;
+}
+.steps &gt; .step.is-active:before {
+  color: #FFF;
+  border: 2px solid #f68e20;
+  background: #f68e20;
+  margin-bottom: -4.9rem;
+}
+
+/**
+ * Some Generic Styling
+ */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font-family: &quot;Open Sans&quot;, sans-serif;
+  text-align: center;
+  color: #6D6875;
+}
+
+.workFlowListView{
+  padding: 15px;
+  line-height: 2;
+}
+
+.nextStep {
+  position: relative;
+  left: 50%;
+  z-index: 999;
+  top: -7%;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="row" style="margin-top: 2% ;">  <div class="col-11">    <ol class="steps">      <li class="step" [id]="\'id_\' + item.employee_id"      [ngClass]="budgetWorkflowInfo.statusid  == \'12\' ? \'is-approve\' : item.flow_id == budgetWorkflowInfo.statusid ? \'is-active\' : item.flow_id < budgetWorkflowInfo.statusid ? \'is-complete\': \'step\'"        data-step="i" *ngFor="let item of workflowArray; index as i">        {{item.flow_name}}        <div *ngIf="(item.flow_id != 12) && isPBCPMRole && (item.flow_id == budgetWorkflowInfo.statusid)" class="nextStep">          <span>            <img  class="icon-size40 cursor" src="./assets/images/next-fance.png" alt="edit" title="Move Next Step"              (click)="nextStepForward()">          </span>        </div>        <dx-popover *ngIf="item.flow_name != \'Approve\'" [target]="\'#id_\'+item.employee_id" position="top" showEvent="dxhoverstart" hideEvent="dxhoverend"          [width]="350">          <div *dxTemplate="let data = model; of: \'content\'">            <div class="row">              <div class="col-sm-12"> ID: <span style="font-weight: bold; ">{{item.employee_id}}</span></div>              <div class="col-sm-12"> <span style="font-weight: bold; ">{{item.employee_name}},</span></div>              <div class="col-sm-12"> <span style="font-weight: bold; ">{{item.employee_details}}</span></div>              <div class="col-sm-12 mt-3">Last Comment: <span style="font-weight: bold; ">{{item.employee_cmnt}}</span>              </div>            </div>          </div>        </dx-popover>      </li>      <!-- <li class="step" data-step="1">        Approver 1      </li> -->    </ol>  </div>  <div class="col-1" [hidden]="!isPBCPMRole">    <span>      <img  class="icon-size30 cursor" src="./assets/images/editIcon.png" alt="edit" title="Edit"        (click)="workFlowEditPopUp()">    </span>  </div></div><dx-popup [showTitle]="true" [title]="popUpTitle" [dragEnabled]="true" [closeOnOutsideClick]="false"  [showCloseButton]="true" [(visible)]="popupVisible" >  <dxi-toolbar-item  toolbar="bottom" location="after">    <div *dxTemplate>      <dx-button  class="themeButton" style="margin: 0 2%;" text="Update" (click)="updateWorkflow()"></dx-button>    </div>  </dxi-toolbar-item>  <div *dxTemplate="let data of \'content\'">    <div class="row" style="overflow: auto;height: inherit;">      <div class="col-12">        <div class="row workFlowListView">          <div class="col-3">Prepared:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedPreparerId" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 0)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedPreparerId">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 1:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover1Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 1)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover1Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 2:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover2Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 2)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover2Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 3:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover3Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 3)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover3Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 4:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover4Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 4)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover4Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 5:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover5Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 5)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover5Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 6:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover6Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 6)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover6Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 7:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover7Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 7)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover7Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 8:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover8Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 8)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover8Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 9:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover9Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 9)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover9Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">Approver 10:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedApprover10Id" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 10)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedApprover10Id">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>        <div class="row workFlowListView">          <div class="col-3">PBCPM:</div>          <div class="col-9">            <!-- <dx-select-box style="width: 380px;" class="col-sm-11" [dataSource]="hrEmployees" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" [searchEnabled]="true" [searchExpr]="[\'hrEmployeename\']"              [(ngModel)]="budgetWorkflowInfo.preparerId">            </dx-select-box> -->            <dx-drop-down-box [(dataSource)]="employeeListDataSource" [(value)]="selectedPbcpmId" valueExpr="hrEmployeeid"              displayExpr="hrEmployeename" placeholder="Select Employee..." [showClearButton]="true"              [deferRendering]="false" (onValueChanged)="userChanged($event, 11)">              <div *dxTemplate="let data of \'content\'">                <dx-data-grid keyExpr="hrEmployeeid" [dataSource]="employeeListDataSource"                  [selection]="{ mode: \'single\' }"                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [filterRow]="{ visible: true }"                  [scrolling]="{ mode: \'infinite\' }" [height]="340" [(selectedRowKeys)]="selectedPbcpmId">                  <dxi-column caption="Employee ID" dataField="hrEmployeeid" alignment="right"></dxi-column>                  <dxi-column caption="Employee Name" dataField="hrEmployeename" alignment="center"></dxi-column>                  <dxi-column caption="Designation" dataField="hrDesgname" alignment="center"></dxi-column>                  <dxi-column caption="Department" dataField="hrDeptname" alignment="center"></dxi-column>                  <dxi-column caption="Branch Name" dataField="placeofpostingbmItemnameusers" alignment="center">                  </dxi-column>                </dx-data-grid>              </div>            </dx-drop-down-box>          </div>        </div>      </div>    </div>  </div></dx-popup></div>'
+    var COMPONENTS = [{'name': 'ActionWorkflowComponent', 'selector': 'app-action-workflow'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetCatagoryComponent', 'selector': 'app-asset-catagory'},{'name': 'AssetsComponent', 'selector': 'app-assets'},{'name': 'BudgetListComponent', 'selector': 'app-budget-list'},{'name': 'CalenderAddComponent', 'selector': 'app-calender-add'},{'name': 'CalenderComponent', 'selector': 'app-calender'},{'name': 'CapitalBudgetAddComponent', 'selector': 'app-capital-budget-add'},{'name': 'CommonBdgtAddComponent', 'selector': 'app-common-bdgt-add'},{'name': 'CommonBudgetTypeComponent', 'selector': 'app-common-budget-type'},{'name': 'ExpenseAddComponent', 'selector': 'app-expense-add'},{'name': 'ExpenseListComponent', 'selector': 'app-expense-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InitBudgetComponent', 'selector': 'app-init-budget'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainLayoutComponent', 'selector': 'app-main-layout'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NoaAssignmentCommonBdgtComponent', 'selector': 'app-noa-assignment-common-bdgt'},{'name': 'NoaAssignmentComponent', 'selector': 'app-noa-assignment'},{'name': 'OrgSetupComponent', 'selector': 'app-org-setup'},{'name': 'ProductionBdgtAddComponent', 'selector': 'app-production-bdgt-add'},{'name': 'RmpmBdgtAddComponent', 'selector': 'app-rmpm-bdgt-add'},{'name': 'StoreSpareAddComponent', 'selector': 'app-store-spare-add'},{'name': 'StoreSpareFilesComponent', 'selector': 'app-store-spare-files'},{'name': 'UploaderFromExcelComponent', 'selector': 'app-uploader-from-excel'},{'name': 'UserSettingAssignmentComponent', 'selector': 'app-user-setting-assignment'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'},{'name': 'WorkflowActionLogHistoryComponent', 'selector': 'app-workflow-action-log-history'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ActionWorkflowComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ActionWorkflowComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1458 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-budgeting-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">e-budgeting-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >BudgetService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/budget/budget.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#authService" >authService</a>
+                            </li>
+                            <li>
+                                <a href="#budgeterviceURL" >budgeterviceURL</a>
+                            </li>
+                            <li>
+                                <a href="#budgetMasterInfo" >budgetMasterInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#commonSettingService" >commonSettingService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#globalService" >globalService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                            <li>
+                                <a href="#sessionUser" >sessionUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#workFlowUILoadObs$" >workFlowUILoadObs$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getBudgetListBy" >getBudgetListBy</a>
+                            </li>
+                            <li>
+                                <a href="#getBudgetLogHistoryBy" >getBudgetLogHistoryBy</a>
+                            </li>
+                            <li>
+                                <a href="#getBudgetMasterInfoBy" >getBudgetMasterInfoBy</a>
+                            </li>
+                            <li>
+                                <a href="#getBudgetTypeNameById" >getBudgetTypeNameById</a>
+                            </li>
+                            <li>
+                                <a href="#getBudgetWorkflowInfoBy" >getBudgetWorkflowInfoBy</a>
+                            </li>
+                            <li>
+                                <a href="#getUserRoleForThisBudget" >getUserRoleForThisBudget</a>
+                            </li>
+                            <li>
+                                <a href="#getWorkFlowUILoadObs" >getWorkFlowUILoadObs</a>
+                            </li>
+                            <li>
+                                <a href="#setWorkFlowUILoadObs" >setWorkFlowUILoadObs</a>
+                            </li>
+                            <li>
+                                <a href="#updateWorkflow" >updateWorkflow</a>
+                            </li>
+                            <li>
+                                <a href="#workflowStepChange" >workflowStepChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: HttpClient, router: Router, globalService: <a href="../injectables/GlobalService.html" target="_self">GlobalService</a>, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, commonSettingService: <a href="../injectables/CommonSettingService.html" target="_self">CommonSettingService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/budget/budget.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code>HttpClient</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonSettingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonSettingService.html" target="_self" >CommonSettingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetListBy"></a>
+                    <span class="name">
+                        <span ><b>getBudgetListBy</b></span>
+                        <a href="#getBudgetListBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBudgetListBy(calId, userid, typeId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>calId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>userid</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>typeId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetLogHistoryBy"></a>
+                    <span class="name">
+                        <span ><b>getBudgetLogHistoryBy</b></span>
+                        <a href="#getBudgetLogHistoryBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBudgetLogHistoryBy(bdgtId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bdgtId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetMasterInfoBy"></a>
+                    <span class="name">
+                        <span ><b>getBudgetMasterInfoBy</b></span>
+                        <a href="#getBudgetMasterInfoBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBudgetMasterInfoBy(bdgtId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bdgtId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetTypeNameById"></a>
+                    <span class="name">
+                        <span ><b>getBudgetTypeNameById</b></span>
+                        <a href="#getBudgetTypeNameById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBudgetTypeNameById(typeId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>typeId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ typeId: any; typeName: string; routerUrl: string; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBudgetWorkflowInfoBy"></a>
+                    <span class="name">
+                        <span ><b>getBudgetWorkflowInfoBy</b></span>
+                        <a href="#getBudgetWorkflowInfoBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBudgetWorkflowInfoBy(bdgtId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bdgtId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserRoleForThisBudget"></a>
+                    <span class="name">
+                        <span ><b>getUserRoleForThisBudget</b></span>
+                        <a href="#getUserRoleForThisBudget"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUserRoleForThisBudget(budgetMasterInfo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>budgetMasterInfo</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;&quot; | { roleName: string; statusId: string; isEditor: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWorkFlowUILoadObs"></a>
+                    <span class="name">
+                        <span ><b>getWorkFlowUILoadObs</b></span>
+                        <a href="#getWorkFlowUILoadObs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWorkFlowUILoadObs()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setWorkFlowUILoadObs"></a>
+                    <span class="name">
+                        <span ><b>setWorkFlowUILoadObs</b></span>
+                        <a href="#setWorkFlowUILoadObs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setWorkFlowUILoadObs(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateWorkflow"></a>
+                    <span class="name">
+                        <span ><b>updateWorkflow</b></span>
+                        <a href="#updateWorkflow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateWorkflow(model: <a href="../interfaces/WorkFlow.html" target="_self">WorkFlow</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="167"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:167</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="../interfaces/WorkFlow.html" target="_self" >WorkFlow</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="workflowStepChange"></a>
+                    <span class="name">
+                        <span ><b>workflowStepChange</b></span>
+                        <a href="#workflowStepChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>workflowStepChange(bdgtId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, step: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, toStepId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="177"
+                            class="link-to-prism">src/app/services/budget/budget.service.ts:177</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bdgtId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>step</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>toStepId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>authService</b></span>
+                        <a href="#authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/services/budget/budget.service.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="budgeterviceURL"></a>
+                    <span class="name">
+                        <span ><b>budgeterviceURL</b></span>
+                        <a href="#budgeterviceURL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.globalService.api_url + &#x27;/Budget&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/budget/budget.service.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="budgetMasterInfo"></a>
+                    <span class="name">
+                        <span ><b>budgetMasterInfo</b></span>
+                        <a href="#budgetMasterInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/budget/budget.service.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="commonSettingService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>commonSettingService</b></span>
+                        <a href="#commonSettingService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/CommonSettingService.html" target="_self" >CommonSettingService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/services/budget/budget.service.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>globalService</b></span>
+                        <a href="#globalService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/budget/budget.service.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Router</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/services/budget/budget.service.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sessionUser"></a>
+                    <span class="name">
+                        <span ><b>sessionUser</b></span>
+                        <a href="#sessionUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/services/budget/budget.service.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="workFlowUILoadObs$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>workFlowUILoadObs$</b></span>
+                        <a href="#workFlowUILoadObs$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BehaviorSubject&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject(true)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/budget/budget.service.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonSettingService } from &#x27;src/app/services/common-setting/common-setting.service&#x27;;
+import { WorkFlow } from &#x27;./../../shared/models/workflow-dto.model&#x27;;
+import { AuthService } from &#x27;./../auth/auth.service&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { BehaviorSubject, Observable, throwError } from &#x27;rxjs&#x27;;
+import { catchError, map } from &#x27;rxjs/operators&#x27;;
+import { GlobalService } from &#x27;../global/global.service&#x27;;
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class BudgetService {
+  private workFlowUILoadObs$: BehaviorSubject&lt;boolean&gt; &#x3D; new BehaviorSubject(true);
+
+  budgeterviceURL &#x3D; this.globalService.api_url + &#x27;/Budget&#x27;;
+  sessionUser: any;
+  budgetMasterInfo: any;
+
+	constructor(
+    private http: HttpClient,
+    public router : Router,
+    public globalService: GlobalService,
+    public authService: AuthService, public commonSettingService :  CommonSettingService) { }
+
+    getWorkFlowUILoadObs(): Observable&lt;any&gt; {
+      return this.workFlowUILoadObs$.asObservable();
+    }
+    setWorkFlowUILoadObs(data : boolean) {
+      this.workFlowUILoadObs$.next(data);
+    }
+
+    getBudgetListBy(calId, userid,typeId) {
+      return this.http.get(this.budgeterviceURL + &#x27;/budget-list?calenderId&#x3D;&#x27; + calId + &#x27;&amp;userId&#x3D;&#x27; + userid + &#x27;&amp;typeId&#x3D;&#x27; + typeId).pipe(
+        map((x: Response) &#x3D;&gt; x),
+        map((x: any) &#x3D;&gt; x),
+        catchError((error: Response) &#x3D;&gt; {
+          return throwError(error);
+        })
+      );
+    }
+
+    getBudgetMasterInfoBy(bdgtId) :Observable&lt;any&gt; {
+      return this.http.get(this.budgeterviceURL + &#x27;/budget-master-info?bdgtId&#x3D;&#x27; + bdgtId).pipe(
+        map((x: Response) &#x3D;&gt; x),
+        map((x: any) &#x3D;&gt; {
+          this.budgetMasterInfo &#x3D; x.result;
+          return x;
+        }),
+        catchError((error: Response) &#x3D;&gt; {
+          return throwError(error);
+        })
+      );
+    }
+
+    getBudgetWorkflowInfoBy(bdgtId) {
+      return this.http.get(this.budgeterviceURL + &#x27;/budget-workflow-info?bdgtId&#x3D;&#x27; + bdgtId).pipe(
+        map((x: Response) &#x3D;&gt; x),
+        map((x: any) &#x3D;&gt; x),
+        catchError((error: Response) &#x3D;&gt; {
+          return throwError(error);
+        })
+      );
+    }
+
+    getBudgetLogHistoryBy(bdgtId) {
+      return this.http.get(this.budgeterviceURL + &#x27;/budget-log-history?bdgtId&#x3D;&#x27; + bdgtId).pipe(
+        map((x: Response) &#x3D;&gt; x),
+        map((x: any) &#x3D;&gt; x),
+        catchError((error: Response) &#x3D;&gt; {
+          return throwError(error);
+        })
+      );
+    }
+
+    getUserRoleForThisBudget(budgetMasterInfo){
+      var statusId &#x3D; budgetMasterInfo.statusid;
+      this.sessionUser &#x3D; this.authService.getSessionUser();
+      let obj &#x3D; {
+        roleName: &#x27;&#x27;,
+        statusId:&#x27;&#x27;,
+        isEditor: false
+      }
+      // if(!this.commonSettingService.selectedCalenderBudgetPeriodOpen()){
+
+      // }
+      if(budgetMasterInfo.preparerId &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;preparer&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 0) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver1Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+       // return &#x27;approver1&#x27;;
+        obj.roleName &#x3D; &#x27;approver1&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 1) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver2Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver2&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 2) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver3Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver3&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 3) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver4Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver4&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 4) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver5Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver5&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 5) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver6Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver6&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 6) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver7Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver7&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 7) ? true : false;
+        return  obj;
+      }
+      if(budgetMasterInfo.approver8Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver8&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 8) ? true : false;
+        return  obj;
+      }
+      if( budgetMasterInfo.approver9Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver9&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 9) ? true : false;
+        return  obj;
+      }
+      if( budgetMasterInfo.approver10Id &#x3D;&#x3D; this.sessionUser.hr_employee_id){
+        obj.roleName &#x3D; &#x27;approver10&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 10) ? true : false;
+        return  obj;
+      }
+      if((budgetMasterInfo.pbcpmId &#x3D;&#x3D; this.sessionUser.hr_employee_id) || this.authService.isPBCPM()){
+        obj.roleName &#x3D; &#x27;pbcpm&#x27;;
+        obj.statusId &#x3D; statusId;
+        obj.isEditor &#x3D; (this.commonSettingService.selectedCalenderBudgetPeriodOpen() &amp;&amp; statusId &#x3D;&#x3D; 11) ? true : false;
+        return  obj;
+      }
+      else {
+        return &#x27;&#x27;;
+      }
+
+
+    }
+
+    updateWorkflow(model:WorkFlow) {
+      return this.http.post(this.budgeterviceURL + &#x27;/budget-workflow-update&#x27;, model).pipe(
+        map((x: Response) &#x3D;&gt; x),
+        map((x: any) &#x3D;&gt; x),
+        catchError((error: Response) &#x3D;&gt; {
+          return throwError(error);
+        })
+      );
+    }
+
+    workflowStepChange(bdgtId: number, step: string, toStepId: number) {
+      return this.http.post(this.budgeterviceURL + &#x27;/budget-workflow-step-change?bdgtId&#x3D;&#x27;+bdgtId +&#x27;&amp;step&#x3D;&#x27; + step + &#x27;&amp;toStepid&#x3D;&#x27; + toStepId, null).pipe(
+        map((x: Response) &#x3D;&gt; x),
+        map((x: any) &#x3D;&gt; x),
+        catchError((error: Response) &#x3D;&gt; {
+          return throwError(error);
+        })
+      );
+    }
+
+    getBudgetTypeNameById(typeId){
+
+      if(typeId &#x3D;&#x3D; 1){
+        return {typeId: typeId, typeName: &#x27;Production Budget&#x27;, routerUrl: &#x27;main/productionBudget&#x27;}
+      } else if(typeId &#x3D;&#x3D; 2){
+        return {typeId: typeId, typeName: &#x27;Raw Packing Consumable Consumption Budget&#x27;, routerUrl: &#x27;main/rmpmBudget&#x27;}
+      } else if(typeId &#x3D;&#x3D; 3){
+        return {typeId: typeId, typeName: &#x27;Store and Spare Budget&#x27;, routerUrl: &#x27;main/storespareBudget&#x27;}
+      } else if(typeId &#x3D;&#x3D; 4){
+        return {typeId: typeId, typeName: &#x27;Expense and Overhead Budget&#x27;, routerUrl: &#x27;main/expenseBudget&#x27;}
+      } else if(typeId &#x3D;&#x3D; 5){
+        return {typeId: typeId, typeName: &#x27;Sales Qty Budget&#x27;, routerUrl: &#x27;main/salesBudget&#x27;}
+      } else if(typeId &#x3D;&#x3D; 6){
+        return {typeId: typeId, typeName: &#x27;Common Budget&#x27;, routerUrl: &#x27;main/commonBudget&#x27;}
+      } else if(typeId &#x3D;&#x3D; 7){
+        return {typeId: typeId, typeName: &#x27;Capital Budget&#x27;, routerUrl: &#x27;main/capitalBudget&#x27;}
+      } else {
+        return {typeId: typeId, typeName: &#x27;Not Found Any Budget type name&#x27;, routerUrl: &#x27;&#x27;}
+      }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'BudgetService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

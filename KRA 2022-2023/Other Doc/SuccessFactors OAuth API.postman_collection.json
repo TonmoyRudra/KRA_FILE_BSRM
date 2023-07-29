@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "0a33072a-b3fd-4188-aed0-6867f1d5b2e9",
+		"name": "SuccessFactors OAuth API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3909266"
+	},
+	"item": [
+		{
+			"name": "https://api44preview.sapsf.com/odata/v2/PerEmail?$filter=emailType eq '22151' and personIdExternal eq '100628'  and isPrimary eq 'true'&$select=emailAddress&$format=JSON",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "tonmoy1994",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "tonmoy.rudra@bsrmsteelsT1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api44preview.sapsf.com/odata/v2/PerEmail?$filter=emailType eq '22151' and personIdExternal eq '100628'  and isPrimary eq 'true'&$select=emailAddress&$format=JSON",
+					"protocol": "https",
+					"host": [
+						"api44preview",
+						"sapsf",
+						"com"
+					],
+					"path": [
+						"odata",
+						"v2",
+						"PerEmail"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "emailType eq '22151' and personIdExternal eq '100628'  and isPrimary eq 'true'"
+						},
+						{
+							"key": "$select",
+							"value": "emailAddress"
+						},
+						{
+							"key": "$format",
+							"value": "JSON"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api44preview.sapsf.com/odata/v2/upsert",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "tonmoy1994",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "tonmoy.rudra@bsrmsteelsT1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"uri\": \"PerEmail(emailType='22151',personIdExternal='100628')\",\r\n        \"type\": \"SFOData.PerEmail\"\r\n    },\r\n    \"emailAddress\": \"saiful.haque_testFromAPI@bsrm.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api44preview.sapsf.com/odata/v2/upsert",
+					"protocol": "https",
+					"host": [
+						"api44preview",
+						"sapsf",
+						"com"
+					],
+					"path": [
+						"odata",
+						"v2",
+						"upsert"
+					],
+					"query": [
+						{
+							"key": "emailType",
+							"value": "22151",
+							"disabled": true
+						},
+						{
+							"key": "isPrimary",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "'emailAddress'",
+							"disabled": true
+						},
+						{
+							"key": "format",
+							"value": "JSON",
+							"disabled": true
+						},
+						{
+							"key": "personIdExternal",
+							"value": "100628",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

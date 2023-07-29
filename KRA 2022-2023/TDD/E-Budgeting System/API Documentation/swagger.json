@@ -1,0 +1,7231 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "E-Budgeting API",
+    "description": "E-Bedgeting OpenAPI documentation.",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Budget/budget-list": {
+      "get": {
+        "tags": [
+          "Budget"
+        ],
+        "parameters": [
+          {
+            "name": "calenderId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "typeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VBudgetflowmasterviewdto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VBudgetflowmasterviewdto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VBudgetflowmasterviewdto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Budget/budget-master-info": {
+      "get": {
+        "tags": [
+          "Budget"
+        ],
+        "parameters": [
+          {
+            "name": "bdgtId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VBudgetmasterdetailsdto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VBudgetmasterdetailsdto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VBudgetmasterdetailsdto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Budget/budget-workflow-info": {
+      "get": {
+        "tags": [
+          "Budget"
+        ],
+        "parameters": [
+          {
+            "name": "bdgtId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VWorkflowdetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VWorkflowdetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VWorkflowdetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Budget/budget-workflow-update": {
+      "post": {
+        "tags": [
+          "Budget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkFlowDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkFlowDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkFlowDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Budget/budget-workflow-step-change": {
+      "post": {
+        "tags": [
+          "Budget"
+        ],
+        "parameters": [
+          {
+            "name": "bdgtId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "toStepId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": -1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Budget/budget-log-history": {
+      "get": {
+        "tags": [
+          "Budget"
+        ],
+        "parameters": [
+          {
+            "name": "bdgtId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VEbgtV2LogHistory"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VEbgtV2LogHistory"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VEbgtV2LogHistory"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CapitalBudget/getDetailsById": {
+      "get": {
+        "tags": [
+          "CapitalBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VCapitalBudgetDetails"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VCapitalBudgetDetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VCapitalBudgetDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CapitalBudget/update": {
+      "post": {
+        "tags": [
+          "CapitalBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapitalDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapitalDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapitalDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CapitalBudget/delete": {
+      "delete": {
+        "tags": [
+          "CapitalBudget"
+        ],
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/company-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/cost-center-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/location-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CompanyDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/calendar-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "calId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2CalendarT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2CalendarT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2CalendarT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/calendar-details": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "calId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/calender": {
+      "post": {
+        "tags": [
+          "Common"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalenderDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalenderDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalenderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Common"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CalendarT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CalendarT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CalendarT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "calId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CalendarT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/asset-category-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/asset-category": {
+      "post": {
+        "tags": [
+          "Common"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Common"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetCategoryT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/asset-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/asset": {
+      "post": {
+        "tags": [
+          "Common"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetNameT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetNameT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetNameT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Common"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetNameT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetNameT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2AssetNameT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2AssetNameT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Common/hr-employee-list": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HrEmployeeInfoDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HrEmployeeInfoDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HrEmployeeInfoDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CommonBudget/getCommonBdgtTypes": {
+      "get": {
+        "tags": [
+          "CommonBudget"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CommonBudget/CommonBdgtTypes": {
+      "post": {
+        "tags": [
+          "CommonBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CommonBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CommonBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2CommonBgtNamesT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CommonBudget/getDetailsById": {
+      "get": {
+        "tags": [
+          "CommonBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VCommonBudgetDetails"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VCommonBudgetDetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VCommonBudgetDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CommonBudget/save": {
+      "post": {
+        "tags": [
+          "CommonBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommonDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommonDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommonDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VExpensebudgetdetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VExpensebudgetdetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VExpensebudgetdetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ExpenseBudget/getDetailsById": {
+      "get": {
+        "tags": [
+          "ExpenseBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VExpensebudgetdetails"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VExpensebudgetdetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VExpensebudgetdetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ExpenseBudget/save": {
+      "post": {
+        "tags": [
+          "ExpenseBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExpenseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExpenseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExpenseDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VExpensebudgetdetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VExpensebudgetdetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VExpensebudgetdetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/common-bdgt-noa-assignment": {
+      "post": {
+        "tags": [
+          "PBCPM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CommonBdgtNOADto"
+                },
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CommonBdgtNOADto"
+                },
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CommonBdgtNOADto"
+                },
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonBdgtNOADto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonBdgtNOADto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonBdgtNOADto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/all-common-noa-assignment": {
+      "get": {
+        "tags": [
+          "PBCPM"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/noa-assignment": {
+      "post": {
+        "tags": [
+          "PBCPM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NOADto"
+                },
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NOADto"
+                },
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NOADto"
+                },
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NOADto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NOADto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NOADto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/all-noa-assignment": {
+      "get": {
+        "tags": [
+          "PBCPM"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/user-setting-assignment": {
+      "post": {
+        "tags": [
+          "PBCPM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                },
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                },
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                },
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettingDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/all-user-assignment": {
+      "get": {
+        "tags": [
+          "PBCPM"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2UserssettingsT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2UserssettingsT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2UserssettingsT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/initiate-budget": {
+      "get": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "cal_id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          },
+          {
+            "name": "sendEmail",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2NoaAssignT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/organization-list": {
+      "get": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "factoryID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VEbgtV2OrganizationsMedia"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VEbgtV2OrganizationsMedia"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VEbgtV2OrganizationsMedia"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/organization": {
+      "post": {
+        "tags": [
+          "PBCPM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PBCPM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "factoryID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PBCPM/update-approver": {
+      "get": {
+        "tags": [
+          "PBCPM"
+        ],
+        "parameters": [
+          {
+            "name": "fromEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "toEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "calId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2UserssettingsT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2UserssettingsT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2UserssettingsT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProductionBudget/getDetailsById": {
+      "get": {
+        "tags": [
+          "ProductionBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VProductionBudgetDetails"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VProductionBudgetDetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VProductionBudgetDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProductionBudget/save": {
+      "post": {
+        "tags": [
+          "ProductionBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VProductionBudgetDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VProductionBudgetDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VProductionBudgetDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProductionBudget/getItemsRatio": {
+      "get": {
+        "tags": [
+          "ProductionBudget"
+        ],
+        "parameters": [
+          {
+            "name": "bdgtId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "orgId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProductionBudget/setItemsRatio": {
+      "post": {
+        "tags": [
+          "ProductionBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                },
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                },
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                },
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2ItemgrpRatioBdgtWiseT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RMPMBudget/getDetailsById": {
+      "get": {
+        "tags": [
+          "RMPMBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RMPMBudget/uploadFreshdata": {
+      "post": {
+        "tags": [
+          "RMPMBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RMPMUploadDto"
+                },
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RMPMUploadDto"
+                },
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RMPMUploadDto"
+                },
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RMPMBudget/update": {
+      "post": {
+        "tags": [
+          "RMPMBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RMPMDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RMPMDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RMPMDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VRmpmBudgetDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RMPMBudget/getItemGroupSummary": {
+      "get": {
+        "tags": [
+          "RMPMBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VRmpmBdgtItemRatioSummary"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VRmpmBdgtItemRatioSummary"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VRmpmBdgtItemRatioSummary"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StoreSpareBudget/getDetailsById": {
+      "get": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VStoreSpareBudgetDetails"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VStoreSpareBudgetDetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VStoreSpareBudgetDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StoreSpareBudget/uploadFreshdata": {
+      "post": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StoreSpareUploadDto"
+                },
+                "nullable": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StoreSpareUploadDto"
+                },
+                "nullable": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StoreSpareUploadDto"
+                },
+                "nullable": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VStoreSpareBudgetDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VStoreSpareBudgetDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VStoreSpareBudgetDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StoreSpareBudget/update": {
+      "post": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StoreSpareDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StoreSpareDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StoreSpareDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBdgtDetailsT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBdgtDetailsT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBdgtDetailsT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StoreSpareBudget/storeBdgtFile-list": {
+      "get": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          },
+          {
+            "name": "locCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "costCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StoreSpareBudget/storeBdgtFile": {
+      "post": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2StoreBudgetFileConfigT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "StoreSpareBudget"
+        ],
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EbgtV2OrganizationsT"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Upload": {
+      "post": {
+        "tags": [
+          "Upload"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary",
+                    "nullable": true
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Comments": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "Comments": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Upload/download": {
+      "get": {
+        "tags": [
+          "Upload"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileStream"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileStream"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileStream"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VBudgetflowmasterviewdto": {
+        "required": [
+          "budgetType",
+          "costCenterid",
+          "locationid"
+        ],
+        "type": "object",
+        "properties": {
+          "budgetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "budgetTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "budgetType": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "locationid": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string"
+          },
+          "location": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "organizationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "organaization": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "costCenterid": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costCenter": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusid": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "status": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusdetails": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusby": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusbyhrid": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "legalEntity": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VBudgetmasterdetailsdto": {
+        "required": [
+          "budgetType",
+          "calendarName",
+          "costcenterCode",
+          "costCenterid",
+          "locationCode",
+          "locationid"
+        ],
+        "type": "object",
+        "properties": {
+          "budgetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "budgetTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "budgetType": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "locationid": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string"
+          },
+          "location": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "organaization": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "costCenterid": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costCenter": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusid": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "status": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusdetails": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusby": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sourceBgtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "btypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "calendarId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "flowstatusBmItemid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "preparerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver1Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver2Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pbcpmId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "preparerCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver1CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver2CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pbcpmCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver2Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costcenterCode": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "totalProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalRawQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "yearlyProdPmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "inactive": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deliveryQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lyear1ProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lyear2ProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lyear3ProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cbid": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "filePhysicalpath": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fileUrlpath": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "cashSales": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "creditSales": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "creditRealizationDays": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "approver3Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver3Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver3CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver4Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver4Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver4CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver5Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver5Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver5CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver6Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver6Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver6CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver7Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver7Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver7CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver8Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver8Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver8CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver9Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver9Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver9CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver10Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver10Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver10CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "wastagePct": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "powerQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ldoQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "gasQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "foilQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "calendarName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "legalEntity": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VWorkflowdetails": {
+        "required": [
+          "budgetType"
+        ],
+        "type": "object",
+        "properties": {
+          "budgetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "budgetTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "budgetType": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "organaization": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusid": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "status": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusdetails": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "statusby": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerDetails": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerName": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver1Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver2Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver2Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver2Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver2Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver3Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver3Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver3Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver3Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver4Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver4Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver4Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver4Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver5Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver5Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver5Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver5Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver6Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver6Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver6Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver6Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver7Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver7Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver7Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver7Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver8Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver8Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver8Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver8Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver9Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver9Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver9Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver9Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver10Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver10Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver10Details": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver10Name": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmDetails": {
+            "maxLength": 603,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmName": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WorkFlowDto": {
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pbcpmId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "preparerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver1Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver2Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver3Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver4Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver5Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver6Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver7Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver8Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver9Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver10Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2BflowMasterT": {
+        "required": [
+          "costcenterCode",
+          "locationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sourceBgtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "btypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "calendarId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "flowstatusBmItemid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "preparerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver1Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver2Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pbcpmId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "preparerCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver1CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver2CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pbcpmCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver2Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costcenterCode": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "totalProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalRawQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "yearlyProdPmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "inactive": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deliveryQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lyear1ProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lyear2ProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lyear3ProdQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cbid": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "filePhysicalpath": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fileUrlpath": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "cashSales": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "creditSales": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "creditRealizationDays": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "approver3Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver3Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver3CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver4Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver4Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver4CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver5Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver5Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver5CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver6Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver6Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver6CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver7Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver7Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver7CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver8Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver8Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver8CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver9Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver9Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver9CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approver10Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver10Cmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver10CmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "wastagePct": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "powerQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ldoQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "gasQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "foilQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "legalEntity": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VEbgtV2LogHistory": {
+        "required": [
+          "calendarName",
+          "typeName"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "btypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "typeName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "calendarId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "calendarName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "hrEmployeeid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hrEmployeename": {
+            "maxLength": 120,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "hrDesgname": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "hrDeptname": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "placeofpostingbmItemnameusers": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "userCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "userCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userAction": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VCapitalBudgetDetails": {
+        "required": [
+          "noaCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "assetCategoryName": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "assetCategoryCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "specification": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "projectName": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "uom": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assetName": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "assetNameCode": {
+            "maxLength": 2000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "monthOfPo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "assessedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ratePerCyearBgt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ttlBgtPmo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "prjDuration": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "carryForwardType": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2CapitalDetailT": {
+        "required": [
+          "assetCategoryCode",
+          "legalEntityCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "assetCategoryCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "specification": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "projectName": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "uom": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assessedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ratePerCyearBgt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ttlBgtPmo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "prjDuration": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "noaCode": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "carryForwardType": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "monthOfPo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "assetNameCode": {
+            "maxLength": 2000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CapitalDto": {
+        "type": "object",
+        "properties": {
+          "ebgtV2CapitalDetailTs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EbgtV2CapitalDetailT"
+            },
+            "nullable": true
+          },
+          "ebgtV2BflowMasterTs": {
+            "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+          },
+          "isPartial": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanyDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "format": "double"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2CalendarT": {
+        "required": [
+          "calendarName"
+        ],
+        "type": "object",
+        "properties": {
+          "calendarId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "calendarName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "fromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "openDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "closeDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "remarks": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "inactive": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "financialYear": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "initiate": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalenderDto": {
+        "required": [
+          "calendarName",
+          "closeDate",
+          "financialYear",
+          "fromDate",
+          "inactive",
+          "openDate",
+          "toDate"
+        ],
+        "type": "object",
+        "properties": {
+          "calendarName": {
+            "type": "string"
+          },
+          "fromDate": {
+            "type": "string"
+          },
+          "toDate": {
+            "type": "string"
+          },
+          "openDate": {
+            "type": "string"
+          },
+          "closeDate": {
+            "type": "string"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "inactive": {
+            "type": "string"
+          },
+          "financialYear": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2AssetCategoryT": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "assetCategoryName": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2AssetNameT": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "assetName": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HrEmployeeInfoDto": {
+        "type": "object",
+        "properties": {
+          "hrEmployeeid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hrEmployeename": {
+            "type": "string",
+            "nullable": true
+          },
+          "hrDeptid": {
+            "type": "number",
+            "format": "double"
+          },
+          "hrDeptname": {
+            "type": "string",
+            "nullable": true
+          },
+          "hrDesgid": {
+            "type": "number",
+            "format": "double"
+          },
+          "hrDesgname": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "bmBranchid": {
+            "type": "number",
+            "format": "double"
+          },
+          "bmBranchname": {
+            "type": "string",
+            "nullable": true
+          },
+          "placeofpostingbmItemidusers": {
+            "type": "number",
+            "format": "double"
+          },
+          "placeofpostingbmItemnameusers": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2CommonBgtNamesT": {
+        "required": [
+          "commonBgtNames"
+        ],
+        "type": "object",
+        "properties": {
+          "cbid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "commonBgtNames": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VCommonBudgetDetails": {
+        "required": [
+          "commonBgtNames",
+          "costCenterCode",
+          "legalEntityCode",
+          "locationCode",
+          "noaCode"
+        ],
+        "type": "object",
+        "properties": {
+          "cbid": {
+            "type": "number",
+            "format": "double"
+          },
+          "commonBgtNames": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "company": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "noaName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "assessedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "costCenterCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costCenterName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "locationName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2CommonBgtDetailT": {
+        "required": [
+          "legalEntityCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cbid": {
+            "type": "number",
+            "format": "double"
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costCenterCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assessedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CommonDto": {
+        "type": "object",
+        "properties": {
+          "ebgtV2CommonBgtDetailTs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EbgtV2CommonBgtDetailT"
+            },
+            "nullable": true
+          },
+          "ebgtV2BflowMasterTs": {
+            "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+          },
+          "isPartial": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VExpensebudgetdetails": {
+        "required": [
+          "costCenterCode",
+          "legalEntityCode",
+          "locationCode",
+          "noaCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "company": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "noaName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 2000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "assessedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "costCenterCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costCenterName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "locationName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2ExpBgtDetailsT": {
+        "required": [
+          "costCenterCode",
+          "legalEntityCode",
+          "locationCode",
+          "noaCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "costCenterCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "locationCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "noaCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "remarks": {
+            "maxLength": 2000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assessedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualLyear3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExpenseDto": {
+        "type": "object",
+        "properties": {
+          "ebgtV2ExpBgtDetailsTs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EbgtV2ExpBgtDetailsT"
+            },
+            "nullable": true
+          },
+          "ebgtV2BflowMasterTs": {
+            "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+          },
+          "isPartial": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CommonBdgtNOADto": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cbid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "costCenterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastYearAmount1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastYearAmount2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastYearAmount3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserSettingDto": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "preparerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bgtTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "inactive": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "costcenterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "comBgtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "regionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver2Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver3Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver4Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver5Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver6Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver7Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver8Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver9Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver10Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pbcpmId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "legalEntity": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2NoaAssignT": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "costCenterCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastYearAmount1": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastYearAmount2": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastYearAmount3": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NOADto": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "legalEntityCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "costCenterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "noaCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastYearAmount1": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastYearAmount2": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastYearAmount3": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "calenderID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2UserssettingsT": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "preparerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bgtTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "inactive": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "costcenterCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "comBgtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "regionId": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "approver1Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver2Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver3Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver4Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver5Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver6Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver7Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver8Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver9Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "approver10Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "pbcpmId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "legalEntity": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VEbgtV2OrganizationsMedia": {
+        "required": [
+          "organizationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "organizationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "organizationCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "factoryId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "rawMaterialPercentage": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "attachedRmpmMediaId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mediaDescription": {
+            "maxLength": 1550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "mediaTitle": {
+            "maxLength": 550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "physicalPath": {
+            "maxLength": 2550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "browserUrl": {
+            "maxLength": 2550,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "originalFileName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "guidFileName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrgDto": {
+        "required": [
+          "factoryId",
+          "name",
+          "organizationCode",
+          "organizationId"
+        ],
+        "type": "object",
+        "properties": {
+          "organizationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "organizationCode": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "factoryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rawMaterialPercentage": {
+            "type": "string",
+            "nullable": true
+          },
+          "attachedRmpmMediaId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2OrganizationsT": {
+        "required": [
+          "organizationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "organizationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "organizationCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "factoryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rawMaterialPercentage": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "attachedRmpmMediaId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VProductionBudgetDetails": {
+        "required": [
+          "orgName"
+        ],
+        "type": "object",
+        "properties": {
+          "sl": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "monthName": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "orgName": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "prodQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalRawMtl": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalGas": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalPower": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalLdo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalFoil": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2ProdDetailsT": {
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sl": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "monthName": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "prodQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalRawMtl": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalGas": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalPower": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalLdo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "totalFoil": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductionDto": {
+        "type": "object",
+        "properties": {
+          "ebgtV2ProdDetailsTs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EbgtV2ProdDetailsT"
+            },
+            "nullable": true
+          },
+          "ebgtV2BflowMasterTs": {
+            "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+          },
+          "isPartial": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2ItemgrpRatioBdgtWiseT": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "bdgtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "groupName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "ratio": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VRmpmBudgetDetails": {
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "assessedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "itemName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "itemCode": {
+            "maxLength": 204,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "uom": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "itemSource": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RMPMUploadDto": {
+        "required": [
+          "budgetId",
+          "itemCode",
+          "itemSource"
+        ],
+        "type": "object",
+        "properties": {
+          "itemSource": {
+            "type": "string"
+          },
+          "itemCode": {
+            "type": "string"
+          },
+          "itemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "forecastQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "budgetId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2RmpmccT": {
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "forecastQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assessedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "yearlyProductionActual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "acCodeCombination": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "codeCombinationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "preparerCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pbcpmCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "itemSource": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RMPMDto": {
+        "type": "object",
+        "properties": {
+          "ebgtV2RmpmccTs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EbgtV2RmpmccT"
+            },
+            "nullable": true
+          },
+          "ebgtV2BflowMasterTs": {
+            "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+          },
+          "isPartial": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VRmpmBdgtItemRatioSummary": {
+        "required": [
+          "groupName"
+        ],
+        "type": "object",
+        "properties": {
+          "groupName": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string"
+          },
+          "groupId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalRawQtyInRmpm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalRawQtyInProd": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "expectedRatioInRmpm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "actualRatioInRmpm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VStoreSpareBudgetDetails": {
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "assessedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preparerCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "yearlyProductionActual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "itemName": {
+            "maxLength": 240,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "forecastQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "itemCode": {
+            "maxLength": 204,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "uom": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "itemSource": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StoreSpareUploadDto": {
+        "required": [
+          "budgetId",
+          "itemCode",
+          "itemSource"
+        ],
+        "type": "object",
+        "properties": {
+          "itemSource": {
+            "type": "string"
+          },
+          "itemCode": {
+            "type": "string"
+          },
+          "itemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "forecastQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "budgetId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2StoreBdgtDetailsT": {
+        "type": "object",
+        "properties": {
+          "bgtId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "forecastQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "forecastQ4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assessedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proposedQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "yearlyProductionActual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear1Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear2Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Actual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lastyear3Production": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "acCodeCombination": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "codeCombinationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "preparerCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pbcpmCmtDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "preparerCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pbcpmCmt": {
+            "maxLength": 1250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "itemSource": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StoreSpareDto": {
+        "type": "object",
+        "properties": {
+          "ebgtV2StoreBdgtDetailsTs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EbgtV2StoreBdgtDetailsT"
+            },
+            "nullable": true
+          },
+          "ebgtV2BflowMasterTs": {
+            "$ref": "#/components/schemas/EbgtV2BflowMasterT"
+          },
+          "isPartial": {
+            "type": "boolean"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EbgtV2StoreBudgetFileConfigT": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "locationCode": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "costcenterCode": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "attachedMediaId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "calendarId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IntPtr": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "SafeFileHandle": {
+        "type": "object",
+        "properties": {
+          "isClosed": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isInvalid": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileStream": {
+        "type": "object",
+        "properties": {
+          "canTimeout": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "readTimeout": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "writeTimeout": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "handle": {
+            "$ref": "#/components/schemas/IntPtr"
+          },
+          "canRead": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "canWrite": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "safeFileHandle": {
+            "$ref": "#/components/schemas/SafeFileHandle"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "isAsync": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "length": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "position": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "canSeek": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

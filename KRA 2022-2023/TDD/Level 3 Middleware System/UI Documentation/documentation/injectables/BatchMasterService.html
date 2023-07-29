@@ -1,0 +1,1500 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>level3-middleware-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">level3-middleware-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >BatchMasterService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/batchMaster/batch-master.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#apiUrl" >apiUrl</a>
+                            </li>
+                            <li>
+                                <a href="#batchStatusEnum" >batchStatusEnum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getBatchListObs$" >getBatchListObs$</a>
+                            </li>
+                            <li>
+                                <a href="#globalParamData" >globalParamData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#globalService" >globalService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAllCreatedBatch" >getAllCreatedBatch</a>
+                            </li>
+                            <li>
+                                <a href="#getBatchDetails" >getBatchDetails</a>
+                            </li>
+                            <li>
+                                <a href="#getBatchMasterByNumber" >getBatchMasterByNumber</a>
+                            </li>
+                            <li>
+                                <a href="#getBatchStatusEnum" >getBatchStatusEnum</a>
+                            </li>
+                            <li>
+                                <a href="#getGlobalParamList" >getGlobalParamList</a>
+                            </li>
+                            <li>
+                                <a href="#getGlobalParamValue" >getGlobalParamValue</a>
+                            </li>
+                            <li>
+                                <a href="#getLoadBatchListObs" >getLoadBatchListObs</a>
+                            </li>
+                            <li>
+                                <a href="#loadBatchListObs" >loadBatchListObs</a>
+                            </li>
+                            <li>
+                                <a href="#updateBatchMasterData" >updateBatchMasterData</a>
+                            </li>
+                            <li>
+                                <a href="#updateGlobalParam" >updateGlobalParam</a>
+                            </li>
+                            <li>
+                                <a href="#upSertBatchDetails" >upSertBatchDetails</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: HttpClient, router: Router, globalService: <a href="../injectables/GlobalService.html" target="_self">GlobalService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:58</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code>HttpClient</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllCreatedBatch"></a>
+                    <span class="name">
+                        <span ><b>getAllCreatedBatch</b></span>
+                        <a href="#getAllCreatedBatch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllCreatedBatch(paginationParams: <a href="../classes/PaginationParams.html" target="_self">PaginationParams</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paginationParams</td>
+                                    <td>
+                                                <code><a href="../classes/PaginationParams.html" target="_self" >PaginationParams</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBatchDetails"></a>
+                    <span class="name">
+                        <span ><b>getBatchDetails</b></span>
+                        <a href="#getBatchDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBatchDetails(paginationParams: <a href="../classes/PaginationParams.html" target="_self">PaginationParams</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paginationParams</td>
+                                    <td>
+                                                <code><a href="../classes/PaginationParams.html" target="_self" >PaginationParams</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBatchMasterByNumber"></a>
+                    <span class="name">
+                        <span ><b>getBatchMasterByNumber</b></span>
+                        <a href="#getBatchMasterByNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBatchMasterByNumber(paginationParams: <a href="../classes/PaginationParams.html" target="_self">PaginationParams</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paginationParams</td>
+                                    <td>
+                                                <code><a href="../classes/PaginationParams.html" target="_self" >PaginationParams</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBatchStatusEnum"></a>
+                    <span class="name">
+                        <span ><b>getBatchStatusEnum</b></span>
+                        <a href="#getBatchStatusEnum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBatchStatusEnum()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="234"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:234</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGlobalParamList"></a>
+                    <span class="name">
+                        <span ><b>getGlobalParamList</b></span>
+                        <a href="#getGlobalParamList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getGlobalParamList(paginationParams: <a href="../classes/PaginationParams.html" target="_self">PaginationParams</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paginationParams</td>
+                                    <td>
+                                                <code><a href="../classes/PaginationParams.html" target="_self" >PaginationParams</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGlobalParamValue"></a>
+                    <span class="name">
+                        <span ><b>getGlobalParamValue</b></span>
+                        <a href="#getGlobalParamValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getGlobalParamValue(paramName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="224"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:224</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paramName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/GlobalParam.html" target="_self" >GlobalParam</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLoadBatchListObs"></a>
+                    <span class="name">
+                        <span ><b>getLoadBatchListObs</b></span>
+                        <a href="#getLoadBatchListObs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLoadBatchListObs()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="262"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:262</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadBatchListObs"></a>
+                    <span class="name">
+                        <span ><b>loadBatchListObs</b></span>
+                        <a href="#loadBatchListObs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadBatchListObs(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="266"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:266</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateBatchMasterData"></a>
+                    <span class="name">
+                        <span ><b>updateBatchMasterData</b></span>
+                        <a href="#updateBatchMasterData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateBatchMasterData(model: <a href="../interfaces/BatchMaster.html" target="_self">BatchMaster</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="238"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:238</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="../interfaces/BatchMaster.html" target="_self" >BatchMaster</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateGlobalParam"></a>
+                    <span class="name">
+                        <span ><b>updateGlobalParam</b></span>
+                        <a href="#updateGlobalParam"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateGlobalParam(updateModel: <a href="../interfaces/GlobalParam.html" target="_self">GlobalParam</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>updateModel</td>
+                                    <td>
+                                                <code><a href="../interfaces/GlobalParam.html" target="_self" >GlobalParam</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="upSertBatchDetails"></a>
+                    <span class="name">
+                        <span ><b>upSertBatchDetails</b></span>
+                        <a href="#upSertBatchDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>upSertBatchDetails(model: <a href="../interfaces/BatchDetailsDto.html" target="_self">BatchDetailsDto[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="../interfaces/BatchDetailsDto.html" target="_self" >BatchDetailsDto[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="apiUrl"></a>
+                    <span class="name">
+                        <span ><b>apiUrl</b></span>
+                        <a href="#apiUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.globalService.api_url + &#x27;/BatchMaster&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="batchStatusEnum"></a>
+                    <span class="name">
+                        <span ><b>batchStatusEnum</b></span>
+                        <a href="#batchStatusEnum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      value: &#x27;PENDING&#x27;,
+      text: &#x27;PENDING&#x27;
+    },
+    {
+      value: &#x27;VALIDATION_FAILED&#x27;,
+      text: &#x27;VALIDATION FAILED&#x27;
+    },{
+      value: &#x27;PROCESSING&#x27;,
+      text: &#x27;PROCESSING&#x27;
+    },{
+      value: &#x27;PHYSICAL_INSPECTION_PENDING&#x27;,
+      text: &#x27;P.INSPECTION PENDING&#x27;
+    },{
+      value: &#x27;ENQUEUE&#x27;,
+      text: &#x27;ENQUEUE&#x27;
+    },{
+      value: &#x27;INCOMPLETE&#x27;,
+      text: &#x27;INCOMPLETE&#x27;
+    },{
+      value: &#x27;COMPLETE&#x27;,
+      text: &#x27;COMPLETE&#x27;
+    },{
+      value: &#x27;FAILED&#x27;,
+      text: &#x27;FAILED&#x27;
+    },{
+      value: &#x27;ERROR&#x27;,
+      text: &#x27;ERROR&#x27;
+    },
+    {
+      value: &#x27;FAKE_BACTH&#x27;,
+      text: &#x27;FAKE BATCH&#x27;
+    }
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBatchListObs$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getBatchListObs$</b></span>
+                        <a href="#getBatchListObs$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BehaviorSubject&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject(false)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalParamData"></a>
+                    <span class="name">
+                        <span ><b>globalParamData</b></span>
+                        <a href="#globalParamData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/GlobalParam.html" target="_self" >GlobalParam[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>globalService</b></span>
+                        <a href="#globalService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Router</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/services/batchMaster/batch-master.service.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BatchDetailsDto } from &#x27;./../../shared/models/BatchDetailsDto&#x27;;
+import { BatchMaster } from &#x27;./../../shared/models/BatchMaster&#x27;;
+import { IResult } from &#x27;./../../shared/models/result&#x27;;
+import { PaginationParams } from &#x27;./../../shared/models/paginationParams&#x27;;
+import { HttpClient, HttpParams } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { BehaviorSubject, Observable, throwError } from &#x27;rxjs&#x27;;
+import { catchError, map } from &#x27;rxjs/operators&#x27;;
+import { GlobalService } from &#x27;../global/global.service&#x27;;
+import { GlobalParam } from &#x27;src/app/shared/models/GlobalParam&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class BatchMasterService {
+
+  private getBatchListObs$: BehaviorSubject&lt;boolean&gt; &#x3D; new BehaviorSubject(false);
+  apiUrl &#x3D; this.globalService.api_url + &#x27;/BatchMaster&#x27;;
+  //paginationParams : IPagination;
+
+
+  batchStatusEnum &#x3D; [
+    {
+      value: &#x27;PENDING&#x27;,
+      text: &#x27;PENDING&#x27;
+    },
+    {
+      value: &#x27;VALIDATION_FAILED&#x27;,
+      text: &#x27;VALIDATION FAILED&#x27;
+    },{
+      value: &#x27;PROCESSING&#x27;,
+      text: &#x27;PROCESSING&#x27;
+    },{
+      value: &#x27;PHYSICAL_INSPECTION_PENDING&#x27;,
+      text: &#x27;P.INSPECTION PENDING&#x27;
+    },{
+      value: &#x27;ENQUEUE&#x27;,
+      text: &#x27;ENQUEUE&#x27;
+    },{
+      value: &#x27;INCOMPLETE&#x27;,
+      text: &#x27;INCOMPLETE&#x27;
+    },{
+      value: &#x27;COMPLETE&#x27;,
+      text: &#x27;COMPLETE&#x27;
+    },{
+      value: &#x27;FAILED&#x27;,
+      text: &#x27;FAILED&#x27;
+    },{
+      value: &#x27;ERROR&#x27;,
+      text: &#x27;ERROR&#x27;
+    },
+    {
+      value: &#x27;FAKE_BACTH&#x27;,
+      text: &#x27;FAKE BATCH&#x27;
+    }
+  ]
+  globalParamData: GlobalParam[] &#x3D; [];
+	constructor(
+    private http: HttpClient,
+    public router : Router,
+    public globalService: GlobalService) { }
+
+  getAllCreatedBatch(paginationParams:PaginationParams) {
+
+    let params : any &#x3D; new HttpParams();
+
+    if(paginationParams.pageIndex){
+      params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    }
+
+    if(paginationParams.pageSize){
+      params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    }
+
+    if(paginationParams.search)
+    {
+      params &#x3D; params.append(&#x27;search&#x27;,paginationParams.search);
+    }
+    if(paginationParams.fromDate)
+    {
+      params &#x3D; params.append(&#x27;fromDate&#x27;,paginationParams.fromDate);
+    }
+    if(paginationParams.toDate)
+    {
+      params &#x3D; params.append(&#x27;toDate&#x27;,paginationParams.toDate);
+    }
+    return this.http.get&lt;IResult&gt;(this.apiUrl + &#x27;/batch-master-list&#x27;,{params:params}).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  getBatchMasterByNumber(paginationParams:PaginationParams) {
+
+    let params : any &#x3D; new HttpParams();
+
+    if(paginationParams.pageIndex){
+      params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    }
+
+    if(paginationParams.pageSize){
+      params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    }
+
+    if(paginationParams.batchNumber)
+    {
+      params &#x3D; params.append(&#x27;batchNumber&#x27;,paginationParams.batchNumber);
+    }
+    return this.http.get&lt;IResult&gt;(this.apiUrl + &#x27;/batch-master-by-number&#x27;,{params:params}).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  getBatchDetails(paginationParams:PaginationParams) {
+
+    let params : any &#x3D; new HttpParams();
+
+    if(paginationParams.pageIndex){
+      params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    }
+
+    if(paginationParams.pageSize){
+      params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    }
+
+    if(paginationParams.search)
+    {
+      params &#x3D; params.append(&#x27;search&#x27;,paginationParams.search);
+    }
+    if(paginationParams.midFk)
+    {
+      params &#x3D; params.append(&#x27;midFk&#x27;,paginationParams.midFk);
+    }
+    if(paginationParams.materialType)
+    {
+      params &#x3D; params.append(&#x27;materialType&#x27;,paginationParams.materialType);
+    }
+    return this.http.get&lt;IResult&gt;(this.apiUrl + &#x27;/batch-details&#x27;,{params:params}).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  upSertBatchDetails(model : BatchDetailsDto[]) {
+
+    // let params : any &#x3D; new HttpParams();
+
+    // if(paginationParams.pageIndex){
+    //   params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    // }
+
+    // if(paginationParams.pageSize){
+    //   params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    // }
+
+    // if(paginationParams.search)
+    // {
+    //   params &#x3D; params.append(&#x27;search&#x27;,paginationParams.search);
+    // }
+    return this.http.post&lt;IResult&gt;(this.apiUrl + &#x27;/batch-details-update&#x27;, model ).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  getGlobalParamList(paginationParams:PaginationParams) {
+
+    let params : any &#x3D; new HttpParams();
+
+    if(paginationParams.pageIndex){
+      params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    }
+
+    if(paginationParams.pageSize){
+      params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    }
+
+    if(paginationParams.search)
+    {
+      params &#x3D; params.append(&#x27;search&#x27;,paginationParams.search);
+    }
+    return this.http.get&lt;IResult&gt;(this.apiUrl + &#x27;/global-param&#x27;,{params:params}).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  updateGlobalParam(updateModel : GlobalParam) {
+
+    // let params : any &#x3D; new HttpParams();
+
+    // if(paginationParams.pageIndex){
+    //   params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    // }
+
+    // if(paginationParams.pageSize){
+    //   params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    // }
+
+    // if(paginationParams.search)
+    // {
+    //   params &#x3D; params.append(&#x27;search&#x27;,paginationParams.search);
+    // }
+    return this.http.post&lt;IResult&gt;(this.apiUrl + &#x27;/update-global-param&#x27;, updateModel ).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  getGlobalParamValue(paramName: string) : GlobalParam {
+    var index &#x3D; this.globalParamData.findIndex(s &#x3D;&gt; s.paramName &#x3D;&#x3D; paramName);
+    if(index !&#x3D;&#x3D; -1) {
+      // Found
+      return this.globalParamData[index];
+    } else {
+      return null;
+    }
+  }
+
+  getBatchStatusEnum(){
+    return this.batchStatusEnum;
+  }
+
+  updateBatchMasterData(model: BatchMaster) {
+
+    // let params : any &#x3D; new HttpParams();
+
+    // if(paginationParams.pageIndex){
+    //   params &#x3D; params.append(&#x27;pageIndex&#x27;,paginationParams.pageIndex);
+    // }
+
+    // if(paginationParams.pageSize){
+    //   params &#x3D; params.append(&#x27;pageSize&#x27;,paginationParams.pageSize);
+    // }
+
+    // if(paginationParams.search)
+    // {
+    //   params &#x3D; params.append(&#x27;search&#x27;,paginationParams.search);
+    // }
+    return this.http.post&lt;IResult&gt;(this.apiUrl + &#x27;/batch-master-update&#x27;, model ).pipe(
+      map((x: IResult) &#x3D;&gt; x),
+      catchError((error: Response) &#x3D;&gt; {
+        return throwError(error);
+      })
+    );
+  }
+
+  getLoadBatchListObs(): Observable&lt;boolean&gt;{
+    return this.getBatchListObs$.asObservable();
+  }
+
+  loadBatchListObs(data: boolean){
+    this.getBatchListObs$.next(data);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'BatchMasterService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+	 SELECT ticket.ProblemDetails as 'Project Title', 
+	 c.Details as 'Project Details', 
+	 m.Remarks as 'Milestone', 
+	 a.Remarks as 'Activity', 
+	 t.Remarks as 'Task', 
+	 t.PlnStartDate as 'Plan Start Date',
+	 t.ActualStartDate as 'Actual Start Date',
+	 CASE 
+		WHEN t.PlnStartDate > t.ActualStartDate THEN 1
+		WHEN t.PlnStartDate = t.ActualStartDate THEN 1
+		WHEN t.PlnStartDate < t.ActualStartDate THEN 0
+		ELSE NULL
+		END AS 'Start On Time',
+	 t.PlnEndDate as 'Plan End Date', 
+	 t.ActualEndDate as 'Actual End Date', 
+	 CASE 
+		WHEN t.PlnEndDate > t.ActualEndDate THEN 1
+		WHEN t.PlnEndDate = t.ActualEndDate THEN 1
+		WHEN t.PlnEndDate < t.ActualEndDate THEN 0
+		ELSE NULL
+		END AS 'Finish On Time',
+	 u.HR_EmployeeID as 'Assign Person HR ID' ,
+	 hremp.HR_EmployeeName as 'Assign Person Name'
+
+	  
+	FROM PM_ChangeRequest c 
+	INNER JOIN PM_Milestone as m ON m.CRId = c.CRId
+	INNER JOIN PM_Activity as a ON a.MSId = m.MSId
+	INNER JOIN PM_Task as t ON t.ACId = a.ACId 
+	INNER JOIN PM_TaskMember as tm ON t.TaskId = tm.TaskId
+	INNER JOIN BM_SecUser as u ON tm.TMUserId = u.BM_UserID
+	INNER JOIN HR_Employee as hremp ON u.HR_EmployeeID = hremp.HR_EmployeeID
+	INNER JOIN IT_TICKET_LIST_V as ticket ON c.TicketNo = ticket.TicketNo 
+	where 
+	t.PlnStartDate BETWEEN '01-Jul-2021' AND '30-Jun-2022' AND 
+	t.PlnEndDate BETWEEN '01-Jul-2021' AND '30-Jun-2022' AND 
+	u.HR_EmployeeID in (17020000005213, 17020000010254, 17020000012681, 17020000012636)
+	ORDER BY u.HR_EmployeeID

@@ -1,0 +1,1734 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-budgeting-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">e-budgeting-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NoaAssignmentComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-noa-assignment</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./noa-assignment.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./noa-assignment.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#catagory" >catagory</a>
+                            </li>
+                            <li>
+                                <a href="#dataSource" >dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#downloadCSVTempleteLink" >downloadCSVTempleteLink</a>
+                            </li>
+                            <li>
+                                <a href="#noalist" >noalist</a>
+                            </li>
+                            <li>
+                                <a href="#selectedCalender" >selectedCalender</a>
+                            </li>
+                            <li>
+                                <a href="#sessionUser" >sessionUser</a>
+                            </li>
+                            <li>
+                                <a href="#sheetName" >sheetName</a>
+                            </li>
+                            <li>
+                                <a href="#showBulkUploader" >showBulkUploader</a>
+                            </li>
+                            <li>
+                                <a href="#subcatagory" >subcatagory</a>
+                            </li>
+                            <li>
+                                <a href="#title" >title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createNOAAssignment" >createNOAAssignment</a>
+                            </li>
+                            <li>
+                                <a href="#createNOAAssignmentSingle" >createNOAAssignmentSingle</a>
+                            </li>
+                            <li>
+                                <a href="#deleteNoaAssignment" >deleteNoaAssignment</a>
+                            </li>
+                            <li>
+                                <a href="#deleteNOAAssignment" >deleteNOAAssignment</a>
+                            </li>
+                            <li>
+                                <a href="#generateDataGrid" >generateDataGrid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNOAList" >getNOAList</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onToolbarPreparing" >onToolbarPreparing</a>
+                            </li>
+                            <li>
+                                <a href="#refreshDataGrid" >refreshDataGrid</a>
+                            </li>
+                            <li>
+                                <a href="#showUploader" >showUploader</a>
+                            </li>
+                            <li>
+                                <a href="#updateNOAAssignment" >updateNOAAssignment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(spinner: NgxSpinnerService, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, globalService: <a href="../injectables/GlobalService.html" target="_self">GlobalService</a>, pbcpmService: <a href="../injectables/PbcpmService.html" target="_self">PbcpmService</a>, commonSettingService: <a href="../injectables/CommonSettingService.html" target="_self">CommonSettingService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>spinner</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgxSpinnerService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>pbcpmService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PbcpmService.html" target="_self" >PbcpmService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonSettingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonSettingService.html" target="_self" >CommonSettingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createNOAAssignment"></a>
+                    <span class="name">
+                        <span ><b>createNOAAssignment</b></span>
+                        <a href="#createNOAAssignment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createNOAAssignment(body: <a href="../interfaces/NOADTO.html" target="_self">NOADTO[]</a>, action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/NOADTO.html" target="_self" >NOADTO[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;add&#x27;</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createNOAAssignmentSingle"></a>
+                    <span class="name">
+                        <span ><b>createNOAAssignmentSingle</b></span>
+                        <a href="#createNOAAssignmentSingle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createNOAAssignmentSingle(values: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>values</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteNoaAssignment"></a>
+                    <span class="name">
+                        <span ><b>deleteNoaAssignment</b></span>
+                        <a href="#deleteNoaAssignment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteNoaAssignment(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="155"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:155</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteNOAAssignment"></a>
+                    <span class="name">
+                        <span ><b>deleteNOAAssignment</b></span>
+                        <a href="#deleteNOAAssignment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteNOAAssignment(key: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateDataGrid"></a>
+                    <span class="name">
+                        <span ><b>generateDataGrid</b></span>
+                        <a href="#generateDataGrid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateDataGrid(list)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>list</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNOAList"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getNOAList</b></span>
+                        <a href="#getNOAList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNOAList()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onToolbarPreparing"></a>
+                    <span class="name">
+                        <span ><b>onToolbarPreparing</b></span>
+                        <a href="#onToolbarPreparing"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onToolbarPreparing(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshDataGrid"></a>
+                    <span class="name">
+                        <span ><b>refreshDataGrid</b></span>
+                        <a href="#refreshDataGrid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshDataGrid()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showUploader"></a>
+                    <span class="name">
+                        <span ><b>showUploader</b></span>
+                        <a href="#showUploader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showUploader(bool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bool</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateNOAAssignment"></a>
+                    <span class="name">
+                        <span ><b>updateNOAAssignment</b></span>
+                        <a href="#updateNOAAssignment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateNOAAssignment(key: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, values: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>values</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="catagory"></a>
+                    <span class="name">
+                        <span ><b>catagory</b></span>
+                        <a href="#catagory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;masterdata&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataSource"></a>
+                    <span class="name">
+                        <span ><b>dataSource</b></span>
+                        <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadCSVTempleteLink"></a>
+                    <span class="name">
+                        <span ><b>downloadCSVTempleteLink</b></span>
+                        <a href="#downloadCSVTempleteLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.globalService.sheetTempleteURL + this.sheetName</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="noalist"></a>
+                    <span class="name">
+                        <span ><b>noalist</b></span>
+                        <a href="#noalist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedCalender"></a>
+                    <span class="name">
+                        <span ><b>selectedCalender</b></span>
+                        <a href="#selectedCalender"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sessionUser"></a>
+                    <span class="name">
+                        <span ><b>sessionUser</b></span>
+                        <a href="#sessionUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sheetName"></a>
+                    <span class="name">
+                        <span ><b>sheetName</b></span>
+                        <a href="#sheetName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;NOA_Assignment.xlsx&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showBulkUploader"></a>
+                    <span class="name">
+                        <span ><b>showBulkUploader</b></span>
+                        <a href="#showBulkUploader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subcatagory"></a>
+                    <span class="name">
+                        <span ><b>subcatagory</b></span>
+                        <a href="#subcatagory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;staff-mapping&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="title"></a>
+                    <span class="name">
+                        <span ><b>title</b></span>
+                        <a href="#title"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;NOA Assignment&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/component/main/pbcpm/noa-assignment/noa-assignment.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonSettingService } from &#x27;./../../../../services/common-setting/common-setting.service&#x27;;
+import { NOADTO } from &#x27;./../../../../shared/models/noa-dto.model&#x27;;
+import { PbcpmService } from &#x27;./../../../../services/pbcpm/pbcpm.service&#x27;;
+import { GlobalService } from &#x27;./../../../../services/global/global.service&#x27;;
+import { AuthService } from &#x27;./../../../../services/auth/auth.service&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { NgxSpinnerService } from &#x27;ngx-spinner&#x27;;
+import CustomStore from &#x27;devextreme/data/custom_store&#x27;;
+
+@Component({
+  selector: &#x27;app-noa-assignment&#x27;,
+  templateUrl: &#x27;./noa-assignment.component.html&#x27;,
+  styleUrls: [&#x27;./noa-assignment.component.css&#x27;]
+})
+export class NoaAssignmentComponent implements OnInit {
+  showBulkUploader &#x3D; false;
+  sessionUser: any;
+  catagory &#x3D; &#x27;masterdata&#x27;;
+  subcatagory &#x3D; &#x27;staff-mapping&#x27;;
+  title &#x3D; &#x27;NOA Assignment&#x27;;
+  sheetName &#x3D; &#x27;NOA_Assignment.xlsx&#x27;;
+  downloadCSVTempleteLink &#x3D; this.globalService.sheetTempleteURL + this.sheetName;
+  dataSource: any;
+  noalist: any;
+  selectedCalender: any;
+
+  constructor(   private spinner: NgxSpinnerService,
+    private authService: AuthService,
+    private globalService: GlobalService,
+    private pbcpmService: PbcpmService,
+    private commonSettingService: CommonSettingService) {
+    this.sessionUser &#x3D; this.authService.getSessionUser();
+    this.selectedCalender &#x3D; this.commonSettingService.getSelectedCalender();
+  }
+
+  ngOnInit(): void {
+    this.getNOAList();
+  }
+
+  onToolbarPreparing(e) {
+    e.toolbarOptions.items.unshift({
+      location: &#x27;after&#x27;,
+      widget: &#x27;dxButton&#x27;,
+      options: {
+        icon: &#x27;refresh&#x27;,
+        onClick: this.refreshDataGrid.bind(this),
+      },
+    });
+  }
+
+  refreshDataGrid() {
+    this.getNOAList();
+
+    //this.dataGrid.instance.refresh();
+  }
+  generateDataGrid(list) {
+    this.dataSource &#x3D; new CustomStore({
+      key: &#x27;pid&#x27;,
+      load: () &#x3D;&gt; list,
+      insert: (values) &#x3D;&gt; this.createNOAAssignmentSingle(values),
+      update: (key, values) &#x3D;&gt; this.updateNOAAssignment(key, values),
+      remove: (key) &#x3D;&gt; this.deleteNOAAssignment(key)
+    });
+  }
+
+  deleteNOAAssignment(key: any):any {
+    this.deleteNoaAssignment(key);
+  }
+
+  updateNOAAssignment(key: any, values: any): any{
+    console.log(&#x27;Update&#x27;, key, values);
+    var selectedData &#x3D; this.noalist.filter((s) &#x3D;&gt; s.pid &#x3D;&#x3D;&#x3D; key)[0];
+
+    for (const key in values) {
+      if (selectedData.hasOwnProperty(key)) {
+        selectedData[key] &#x3D; values[key];
+      }
+    }
+    console.log(&#x27;Update&#x27;, selectedData);
+    this.createNOAAssignment([selectedData], &#x27;update&#x27;);
+  }
+
+  createNOAAssignmentSingle(values: any): any {
+    this.createNOAAssignment([values],&#x27;addSingle&#x27;);
+  }
+
+  showUploader(bool: boolean) {
+    this.showBulkUploader &#x3D; bool;
+  }
+
+  async getNOAList() {
+    this.globalService.showSpinner(true);
+    (await this.pbcpmService.getAllNOA()).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          // this.programList &#x3D; result.resultset;
+          this.noalist&#x3D; result.result;
+          let slNo &#x3D; 1;
+          this.noalist.forEach((element) &#x3D;&gt; {
+            element.slNo &#x3D; slNo++;
+            element.costCenterCode &#x3D; element.costCenterCode.padStart(4, &#x27;0&#x27;);
+            element.locationCode &#x3D; element.locationCode.padStart(3, &#x27;0&#x27;);
+            element.legalEntityCode &#x3D; element.legalEntityCode.padStart(2, &#x27;0&#x27;);
+          });
+          console.log(this.noalist)
+          this.generateDataGrid(this.noalist);
+          this.globalService.showSpinner(false);
+        }
+      },
+      (err) &#x3D;&gt; {
+        this.globalService.showSpinner(false);
+
+        console.log(err);
+      }
+    );
+  }
+
+  createNOAAssignment(body: NOADTO[], action&#x3D;&#x27;add&#x27;) {
+    this.spinner.show();
+    var model &#x3D;  body;
+    if(action &#x3D;&#x3D; &#x27;add&#x27;){
+      body.forEach(element &#x3D;&gt; {
+        element.LegalEntityCode &#x3D; element.LegalEntityCode.toString();
+        element.CostCenterCode &#x3D; element.CostCenterCode.toString();
+        element.LocationCode &#x3D; element.LocationCode.toString();
+        element.NoaCode &#x3D; element.NoaCode.toString();
+        element.CalenderID &#x3D; this.selectedCalender.calendarId;
+      });
+    } else {
+      body.forEach(element &#x3D;&gt; {
+        element.CalenderID &#x3D; this.selectedCalender.calendarId;
+      });
+    }
+
+    this.pbcpmService.createNOAAssignment(model).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          this.spinner.hide();
+          console.log(&#x27;create NOA Done&#x27;);
+          if(action &#x3D;&#x3D; &#x27;update&#x27;) this.globalService.showSwal(&#x27;Update&#x27; , &#x27;Succesfully Update.&#x27;, &#x27;success&#x27;)
+          else this.globalService.showSwal(&#x27;Success&#x27; , &#x27;Succesfully NOA assignment done.&#x27;, &#x27;success&#x27;)
+
+          console.log(result);
+          this.showUploader(false);
+          this.getNOAList();
+        }
+      },
+      (err) &#x3D;&gt; {
+        this.spinner.hide();
+        this.globalService.showSwal(&#x27;Warning&#x27;, err.Message, &#x27;error&#x27;);
+
+      }
+    );
+  }
+  deleteNoaAssignment(id) {
+    this.pbcpmService.deleteNOAAssignment(id).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          this.spinner.hide();
+          console.log(&#x27;create Users Done&#x27;);
+          console.log(result);
+
+          this.globalService.showSwal(&#x27;Deleted&#x27; , result.message, &#x27;success&#x27;)
+
+          this.showUploader(false);
+          this.getNOAList();
+        }
+      },
+      (err) &#x3D;&gt; {
+        this.spinner.hide();
+        this.globalService.showSwal(&#x27;Warning&#x27;, err.Message, &#x27;error&#x27;);
+
+      }
+    );
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;span *ngIf&#x3D;&quot;!showBulkUploader&quot;&gt;
+  &lt;div class&#x3D;&quot;content-wrapper&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-12 grid-margin stretch-card&quot;&gt;
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-xl-12 mb-4 mb-xl-0 &quot;&gt;
+              &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                &lt;h2 class&#x3D;&quot;card-title&quot;&gt;Nature of Account(NOA) Assignment&lt;/h2&gt;
+                &lt;p class&#x3D;&quot;card-description&quot;&gt;List of NOA&lt;/p&gt;
+                &lt;div class&#x3D;&quot;newButtonAlignrigt&quot; &gt;
+                  &lt;!-- &lt;dx-button class&#x3D;&quot;themeButton mr-1&quot; text&#x3D;&quot;Add new&quot; [routerLink]&#x3D;&quot;[&#x27;../addStaffMapping&#x27;]&quot;&gt;&lt;/dx-button&gt; --&gt;
+                  &lt;dx-button class&#x3D;&quot;themeButtonWhite&quot; text&#x3D;&quot;Upload Data&quot; (click)&#x3D;&quot;showUploader(true)&quot;&gt;&lt;/dx-button&gt;
+                &lt;/div&gt;
+
+
+                &lt;!-- &lt;div class&#x3D;&quot;col-sm-6&quot; &gt;
+                  &lt;div class&#x3D;&quot;form-group row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Programme Name&lt;/label&gt;
+                      &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;dx-select-box class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;programList&quot; valueExpr&#x3D;&quot;id&quot; displayExpr&#x3D;&quot;program_name&quot;
+                          [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;program_name&#x27;]&quot; [(ngModel)]&#x3D;&quot;programID&quot;
+                          (onSelectionChanged)&#x3D;&quot;programOptionChange($event)&quot;&gt;
+                          &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                            &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Programme Name Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                        &lt;/dx-validator&gt;
+                        &lt;/dx-select-box&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Select Cohort&lt;/label&gt;
+                      &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;dx-select-box [disabled]&#x3D;!programID  class&#x3D;&quot;col-sm-11&quot; [dataSource]&#x3D;&quot;cohortDatasource&quot; valueExpr&#x3D;&quot;id&quot; displayExpr&#x3D;&quot;cohort&quot;
+                          [searchEnabled]&#x3D;&quot;true&quot; [searchExpr]&#x3D;&quot;[&#x27;cohort&#x27;]&quot;
+                          (onSelectionChanged)&#x3D;&quot;cohortOptionChange($event)&quot; [(ngModel)]&#x3D;&quot;cohortId&quot;&gt;
+                          &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                            &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Cohort Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                        &lt;/dx-validator&gt;
+                        &lt;/dx-select-box&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt; --&gt;
+                &lt;dx-data-grid #gridContainer [dataSource]&#x3D;&quot;dataSource&quot;  [showBorders]&#x3D;&quot;false&quot;  [showColumnLines] &#x3D; &quot;false&quot; [showRowLines]&#x3D;&quot;false&quot;
+                  [allowColumnResizing]&#x3D;&quot;true&quot; columnResizingMode&#x3D;&quot;widget&quot; [focusedRowEnabled]&#x3D;&quot;false&quot;
+                  [rowAlternationEnabled]&#x3D;&quot;true&quot; keyExpr&#x3D;&quot;pid&quot; [wordWrapEnabled]&#x3D;&quot;true&quot; (onToolbarPreparing)&#x3D;&quot;onToolbarPreparing($event)&quot;&gt;
+
+                  &lt;dxo-sorting mode&#x3D;&quot;multiple&quot;&gt;&lt;/dxo-sorting&gt;
+                  &lt;dxo-export [enabled]&#x3D;&quot;true&quot; fileName&#x3D;&quot;NOA-LIST&quot; [printingEnabled]&#x3D;&quot;false&quot;&gt;&lt;/dxo-export&gt;
+                  &lt;dxo-paging [pageSize]&#x3D;&quot;this.globalService.rowSize&quot;&gt;&lt;/dxo-paging&gt;
+                  &lt;dxo-search-panel [visible]&#x3D;&quot;true&quot; [width]&#x3D;&quot;240&quot; placeholder&#x3D;&quot;Search...&quot;&gt; &lt;/dxo-search-panel&gt;
+                  &lt;!-- &lt;dxo-filter-row [visible]&#x3D;&quot;true&quot;&gt;&lt;/dxo-filter-row&gt; --&gt;
+                  &lt;dxo-header-filter [visible]&#x3D;&quot;true&quot;&gt;&lt;/dxo-header-filter&gt;
+                  &lt;dxo-pager [showPageSizeSelector]&#x3D;&quot;true&quot; [allowedPageSizes]&#x3D;&quot;[10,20,50, 100, 250, 500, 1000]&quot;
+                    [showInfo]&#x3D;&quot;true&quot;&gt;
+                  &lt;/dxo-pager&gt;
+                  &lt;dxo-column-chooser [enabled]&#x3D;&quot;true&quot; mode&#x3D;&quot;dragAndDrop&quot;&gt; &lt;/dxo-column-chooser&gt;
+                  &lt;dxo-grouping&gt;&lt;/dxo-grouping&gt;
+                  &lt;dxo-editing
+                  mode&#x3D;&quot;popup&quot;
+                  [useIcons]&#x3D;&quot;true&quot;
+                  [allowUpdating]&#x3D;&quot;true&quot;
+                  [allowAdding]&#x3D;&quot;true&quot;
+                  [allowDeleting]&#x3D;&quot;true&quot; &gt;
+                  &lt;dxo-popup [showTitle]&#x3D;&quot;true&quot; title&#x3D;&quot;NOA Assignment add/update&quot;&gt;&lt;/dxo-popup&gt;
+                &lt;/dxo-editing&gt;
+                  &lt;dxi-column caption&#x3D;&quot;#SL&quot; dataField&#x3D;&quot;slNo&quot;  [allowEditing]&#x3D;&quot;false&quot; width&#x3D;&#x27;60&#x27; alignment&#x3D;&quot;center&quot;&gt; &lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Legal Entity Code&quot; dataField&#x3D;&quot;legalEntityCode&quot; alignment&#x3D;&quot;center&quot;&gt;
+                    &lt;dxi-validation-rule type&#x3D;&quot;required&quot; [message]&#x3D;&quot;&#x27;Required&#x27;&quot;&gt;&lt;/dxi-validation-rule&gt;
+                  &lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Cost Center Code&quot; dataField&#x3D;&quot;costCenterCode&quot; alignment&#x3D;&quot;center&quot;&gt;
+                    &lt;dxi-validation-rule type&#x3D;&quot;required&quot; [message]&#x3D;&quot;&#x27;Required&#x27;&quot;&gt;&lt;/dxi-validation-rule&gt;
+                  &lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Location Code&quot; dataField&#x3D;&quot;locationCode&quot; alignment&#x3D;&quot;center&quot;&gt;
+                    &lt;dxi-validation-rule type&#x3D;&quot;required&quot; [message]&#x3D;&quot;&#x27;Required&#x27;&quot;&gt;&lt;/dxi-validation-rule&gt;
+                  &lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;NOA Code&quot; dataField&#x3D;&quot;noaCode&quot; alignment&#x3D;&quot;center&quot;&gt;
+                    &lt;dxi-validation-rule type&#x3D;&quot;required&quot; [message]&#x3D;&quot;&#x27;Required&#x27;&quot;&gt;&lt;/dxi-validation-rule&gt;
+                  &lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Last Year Amount 1&quot;  format&#x3D;&quot;#,##,##0.##&quot; dataField&#x3D;&quot;lastYearAmount1&quot; dataType&#x3D;&quot;number&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Last Year Amount 2&quot;  format&#x3D;&quot;#,##,##0.##&quot; dataField&#x3D;&quot;lastYearAmount2&quot; dataType&#x3D;&quot;number&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Last Year Amount 3&quot;  format&#x3D;&quot;#,##,##0.##&quot; dataField&#x3D;&quot;lastYearAmount3&quot; dataType&#x3D;&quot;number&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;dxi-column caption&#x3D;&quot;Creation Date&quot; dataField&#x3D;&quot;creationDate&quot; dataType&#x3D;&quot;date&quot;  format&#x3D;&quot;dd-MMM-yyyy HH:mm:ss&quot; alignment&#x3D;&quot;center&quot;&gt;&lt;/dxi-column&gt;
+                  &lt;!-- &lt;dxi-column caption&#x3D;&quot;Action&quot; alignment&#x3D;&quot;center&quot; &gt;&lt;/dxi-column&gt; --&gt;
+
+
+                    &lt;!-- &lt;tbody class&#x3D;&quot;dx-row&quot; [ngClass]&#x3D;&quot;{&#x27;dx-row-alt&#x27;: row.rowIndex % 2}&quot; *dxTemplate&#x3D;&quot;let row of &#x27;rowTemplateName&#x27;&quot; &gt;
+                      &lt;tr class&#x3D;&quot;custom-row&quot;&gt;
+                        &lt;td&gt;{{row.data.slNo}}&lt;/td&gt;
+                          &lt;td&gt;{{row.data.legalEntityCode}}&lt;/td&gt;
+                          &lt;td&gt;{{row.data.costCenterCode}}&lt;/td&gt;
+                          &lt;td&gt;{{row.data.locationCode}}&lt;/td&gt;
+                          &lt;td&gt;{{row.data.noaCode}}&lt;/td&gt;
+                          &lt;td&gt;{{row.data.creationDate | date: &#x27;dd-MMM-yyyy&#x27;}}&lt;/td&gt;
+                          &lt;td&gt;
+                            &lt;span&gt;
+                              &lt;img class&#x3D;&quot;icon-size30 cursor&quot; src&#x3D;&quot;./assets/images/editIcon.png&quot; alt&#x3D;&quot;edit&quot;
+                                title&#x3D;&quot;Edit&quot;  (click)&#x3D;&quot;update(row.data)&quot;&gt;
+                            &lt;/span&gt;
+                            &lt;span&gt;
+                              &lt;img class&#x3D;&quot;icon-size30 cursor&quot; src&#x3D;&quot;./assets/images/deleteIcon.png&quot; alt&#x3D;&quot;delete&quot;
+                                title&#x3D;&quot;Delete&quot;  (click)&#x3D;&quot;delete(row.data)&quot;&gt;
+                            &lt;/span&gt;
+                          &lt;/td&gt;
+                      &lt;/tr&gt;
+                  &lt;/tbody&gt; --&gt;
+                &lt;/dx-data-grid&gt;
+
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/span&gt;
+  &lt;span *ngIf&#x3D;&quot;showBulkUploader&quot;&gt;
+    &lt;app-uploader-from-excel
+    (showUploaderClick) &#x3D; &quot;showUploader($event)&quot;
+    (submitUploadDataClick) &#x3D; &quot;createNOAAssignment($event)&quot;
+    [catagory]&#x3D;&quot;catagory&quot;
+    [subcatagory]&#x3D;&quot;subcatagory&quot;
+    [title]&#x3D;&quot;title&quot;
+    [downloadCSVTempleteLink]&#x3D;&quot;downloadCSVTempleteLink&quot; &gt;&lt;/app-uploader-from-excel&gt;
+  &lt;/span&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./noa-assignment.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><span *ngIf="!showBulkUploader">  <div class="content-wrapper">    <div class="row">      <div class="col-12 grid-margin stretch-card">        <div class="card">          <div class="row">            <div class="col-12 col-xl-12 mb-4 mb-xl-0 ">              <div class="card-body">                <h2 class="card-title">Nature of Account(NOA) Assignment</h2>                <p class="card-description">List of NOA</p>                <div class="newButtonAlignrigt" >                  <!-- <dx-button class="themeButton mr-1" text="Add new" [routerLink]="[\'../addStaffMapping\']"></dx-button> -->                  <dx-button class="themeButtonWhite" text="Upload Data" (click)="showUploader(true)"></dx-button>                </div>                <!-- <div class="col-sm-6" >                  <div class="form-group row">                    <div class="col-sm-6">                      <label class="col-form-label">Programme Name</label>                      <div class="row">                        <dx-select-box class="col-sm-11" [dataSource]="programList" valueExpr="id" displayExpr="program_name"                          [searchEnabled]="true" [searchExpr]="[\'program_name\']" [(ngModel)]="programID"                          (onSelectionChanged)="programOptionChange($event)">                          <dx-validator validationGroup="validationGrp">                            <dxi-validation-rule type="required" message="Programme Name Required"></dxi-validation-rule>                        </dx-validator>                        </dx-select-box>                      </div>                    </div>                    <div class="col-sm-6">                      <label class="col-form-label">Select Cohort</label>                      <div class="row">                        <dx-select-box [disabled]=!programID  class="col-sm-11" [dataSource]="cohortDatasource" valueExpr="id" displayExpr="cohort"                          [searchEnabled]="true" [searchExpr]="[\'cohort\']"                          (onSelectionChanged)="cohortOptionChange($event)" [(ngModel)]="cohortId">                          <dx-validator validationGroup="validationGrp">                            <dxi-validation-rule type="required" message="Cohort Required"></dxi-validation-rule>                        </dx-validator>                        </dx-select-box>                      </div>                    </div>                  </div>                </div> -->                <dx-data-grid #gridContainer [dataSource]="dataSource"  [showBorders]="false"  [showColumnLines] = "false" [showRowLines]="false"                  [allowColumnResizing]="true" columnResizingMode="widget" [focusedRowEnabled]="false"                  [rowAlternationEnabled]="true" keyExpr="pid" [wordWrapEnabled]="true" (onToolbarPreparing)="onToolbarPreparing($event)">                  <dxo-sorting mode="multiple"></dxo-sorting>                  <dxo-export [enabled]="true" fileName="NOA-LIST" [printingEnabled]="false"></dxo-export>                  <dxo-paging [pageSize]="this.globalService.rowSize"></dxo-paging>                  <dxo-search-panel [visible]="true" [width]="240" placeholder="Search..."> </dxo-search-panel>                  <!-- <dxo-filter-row [visible]="true"></dxo-filter-row> -->                  <dxo-header-filter [visible]="true"></dxo-header-filter>                  <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[10,20,50, 100, 250, 500, 1000]"                    [showInfo]="true">                  </dxo-pager>                  <dxo-column-chooser [enabled]="true" mode="dragAndDrop"> </dxo-column-chooser>                  <dxo-grouping></dxo-grouping>                  <dxo-editing                  mode="popup"                  [useIcons]="true"                  [allowUpdating]="true"                  [allowAdding]="true"                  [allowDeleting]="true" >                  <dxo-popup [showTitle]="true" title="NOA Assignment add/update"></dxo-popup>                </dxo-editing>                  <dxi-column caption="#SL" dataField="slNo"  [allowEditing]="false" width=\'60\' alignment="center"> </dxi-column>                  <dxi-column caption="Legal Entity Code" dataField="legalEntityCode" alignment="center">                    <dxi-validation-rule type="required" [message]="\'Required\'"></dxi-validation-rule>                  </dxi-column>                  <dxi-column caption="Cost Center Code" dataField="costCenterCode" alignment="center">                    <dxi-validation-rule type="required" [message]="\'Required\'"></dxi-validation-rule>                  </dxi-column>                  <dxi-column caption="Location Code" dataField="locationCode" alignment="center">                    <dxi-validation-rule type="required" [message]="\'Required\'"></dxi-validation-rule>                  </dxi-column>                  <dxi-column caption="NOA Code" dataField="noaCode" alignment="center">                    <dxi-validation-rule type="required" [message]="\'Required\'"></dxi-validation-rule>                  </dxi-column>                  <dxi-column caption="Last Year Amount 1"  format="#,##,##0.##" dataField="lastYearAmount1" dataType="number" alignment="center"></dxi-column>                  <dxi-column caption="Last Year Amount 2"  format="#,##,##0.##" dataField="lastYearAmount2" dataType="number" alignment="center"></dxi-column>                  <dxi-column caption="Last Year Amount 3"  format="#,##,##0.##" dataField="lastYearAmount3" dataType="number" alignment="center"></dxi-column>                  <dxi-column caption="Creation Date" dataField="creationDate" dataType="date"  format="dd-MMM-yyyy HH:mm:ss" alignment="center"></dxi-column>                  <!-- <dxi-column caption="Action" alignment="center" ></dxi-column> -->                    <!-- <tbody class="dx-row" [ngClass]="{\'dx-row-alt\': row.rowIndex % 2}" *dxTemplate="let row of \'rowTemplateName\'" >                      <tr class="custom-row">                        <td>{{row.data.slNo}}</td>                          <td>{{row.data.legalEntityCode}}</td>                          <td>{{row.data.costCenterCode}}</td>                          <td>{{row.data.locationCode}}</td>                          <td>{{row.data.noaCode}}</td>                          <td>{{row.data.creationDate | date: \'dd-MMM-yyyy\'}}</td>                          <td>                            <span>                              <img class="icon-size30 cursor" src="./assets/images/editIcon.png" alt="edit"                                title="Edit"  (click)="update(row.data)">                            </span>                            <span>                              <img class="icon-size30 cursor" src="./assets/images/deleteIcon.png" alt="delete"                                title="Delete"  (click)="delete(row.data)">                            </span>                          </td>                      </tr>                  </tbody> -->                </dx-data-grid>              </div>            </div>          </div>        </div>      </div>    </div>  </div>  </span>  <span *ngIf="showBulkUploader">    <app-uploader-from-excel    (showUploaderClick) = "showUploader($event)"    (submitUploadDataClick) = "createNOAAssignment($event)"    [catagory]="catagory"    [subcatagory]="subcatagory"    [title]="title"    [downloadCSVTempleteLink]="downloadCSVTempleteLink" ></app-uploader-from-excel>  </span></div>'
+    var COMPONENTS = [{'name': 'ActionWorkflowComponent', 'selector': 'app-action-workflow'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetCatagoryComponent', 'selector': 'app-asset-catagory'},{'name': 'AssetsComponent', 'selector': 'app-assets'},{'name': 'BudgetListComponent', 'selector': 'app-budget-list'},{'name': 'CalenderAddComponent', 'selector': 'app-calender-add'},{'name': 'CalenderComponent', 'selector': 'app-calender'},{'name': 'CapitalBudgetAddComponent', 'selector': 'app-capital-budget-add'},{'name': 'CommonBdgtAddComponent', 'selector': 'app-common-bdgt-add'},{'name': 'CommonBudgetTypeComponent', 'selector': 'app-common-budget-type'},{'name': 'ExpenseAddComponent', 'selector': 'app-expense-add'},{'name': 'ExpenseListComponent', 'selector': 'app-expense-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InitBudgetComponent', 'selector': 'app-init-budget'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainLayoutComponent', 'selector': 'app-main-layout'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NoaAssignmentCommonBdgtComponent', 'selector': 'app-noa-assignment-common-bdgt'},{'name': 'NoaAssignmentComponent', 'selector': 'app-noa-assignment'},{'name': 'OrgSetupComponent', 'selector': 'app-org-setup'},{'name': 'ProductionBdgtAddComponent', 'selector': 'app-production-bdgt-add'},{'name': 'RmpmBdgtAddComponent', 'selector': 'app-rmpm-bdgt-add'},{'name': 'StoreSpareAddComponent', 'selector': 'app-store-spare-add'},{'name': 'StoreSpareFilesComponent', 'selector': 'app-store-spare-files'},{'name': 'UploaderFromExcelComponent', 'selector': 'app-uploader-from-excel'},{'name': 'UserSettingAssignmentComponent', 'selector': 'app-user-setting-assignment'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'},{'name': 'WorkflowActionLogHistoryComponent', 'selector': 'app-workflow-action-log-history'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NoaAssignmentComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NoaAssignmentComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

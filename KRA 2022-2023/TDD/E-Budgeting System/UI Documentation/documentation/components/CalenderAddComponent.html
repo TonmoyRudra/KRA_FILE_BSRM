@@ -1,0 +1,1109 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-budgeting-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">e-budgeting-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  CalenderAddComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/main/pbcpm/calender-add/calender-add.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-calender-add</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./calender-add.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./calender-add.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calendarId" >calendarId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#commonSettingService" >commonSettingService</a>
+                            </li>
+                            <li>
+                                <a href="#editMode" >editMode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#globalService" >globalService</a>
+                            </li>
+                            <li>
+                                <a href="#model" >model</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeModeChange" >activeModeChange</a>
+                            </li>
+                            <li>
+                                <a href="#clearField" >clearField</a>
+                            </li>
+                            <li>
+                                <a href="#getCalendarById" >getCalendarById</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: ActivatedRoute, commonSettingService: <a href="../injectables/CommonSettingService.html" target="_self">CommonSettingService</a>, globalService: <a href="../injectables/GlobalService.html" target="_self">GlobalService</a>, datePipe: DatePipe)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonSettingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonSettingService.html" target="_self" >CommonSettingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>globalService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datePipe</td>
+                                                  
+                                                        <td>
+                                                                    <code>DatePipe</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activeModeChange"></a>
+                    <span class="name">
+                        <span ><b>activeModeChange</b></span>
+                        <a href="#activeModeChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>activeModeChange(data, e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearField"></a>
+                    <span class="name">
+                        <span ><b>clearField</b></span>
+                        <a href="#clearField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearField()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCalendarById"></a>
+                    <span class="name">
+                        <span ><b>getCalendarById</b></span>
+                        <a href="#getCalendarById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCalendarById(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calendarId"></a>
+                    <span class="name">
+                        <span ><b>calendarId</b></span>
+                        <a href="#calendarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="commonSettingService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>commonSettingService</b></span>
+                        <a href="#commonSettingService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/CommonSettingService.html" target="_self" >CommonSettingService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMode"></a>
+                    <span class="name">
+                        <span ><b>editMode</b></span>
+                        <a href="#editMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>globalService</b></span>
+                        <a href="#globalService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/GlobalService.html" target="_self" >GlobalService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="model"></a>
+                    <span class="name">
+                        <span ><b>model</b></span>
+                        <a href="#model"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    calendarId : null,
+    calendarName : null,
+    fromDate : null,
+    toDate : null,
+    openDate: null,
+    closeDate: null,
+    remarks: null,
+    financialYear: null,
+    inactive: &#x27;N&#x27;,
+    createdBy: null,
+    creationDate:null,
+    lastUpdateBy: null,
+    lastUpdateDate: null,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/component/main/pbcpm/calender-add/calender-add.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { GlobalService } from &#x27;src/app/services/global/global.service&#x27;;
+import { ICalendar } from &#x27;./../../../../shared/models/calendar&#x27;;
+import { CommonSettingService } from &#x27;src/app/services/common-setting/common-setting.service&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import ValidationEngine from &#x27;devextreme/ui/validation_engine&#x27;;
+import { catchError, map } from &#x27;rxjs/operators&#x27;;
+import { DatePipe } from &#x27;@angular/common&#x27;;
+
+@Component({
+  selector: &#x27;app-calender-add&#x27;,
+  templateUrl: &#x27;./calender-add.component.html&#x27;,
+  styleUrls: [&#x27;./calender-add.component.css&#x27;]
+})
+export class CalenderAddComponent implements OnInit {
+  calendarId: any;
+  editMode: boolean;
+  model: any &#x3D; {
+    calendarId : null,
+    calendarName : null,
+    fromDate : null,
+    toDate : null,
+    openDate: null,
+    closeDate: null,
+    remarks: null,
+    financialYear: null,
+    inactive: &#x27;N&#x27;,
+    createdBy: null,
+    creationDate:null,
+    lastUpdateBy: null,
+    lastUpdateDate: null,
+  };
+
+
+  constructor(  private route: ActivatedRoute, public commonSettingService: CommonSettingService,
+    public globalService: GlobalService, private datePipe: DatePipe) {
+
+    }
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) &#x3D;&gt; {
+      this.calendarId &#x3D; params[&#x27;calendarId&#x27;];
+      if (this.calendarId) {
+        this.editMode &#x3D; true;
+        this.getCalendarById(this.calendarId);
+      }
+    });
+  }
+
+  getCalendarById(id) {
+    this.commonSettingService.getAllCalender(id).subscribe(
+      (result) &#x3D;&gt; {
+        if (result.statusCode &#x3D;&#x3D; 200) {
+          console.log(result.result);
+          // var s &#x3D; result.result.map((iCalendar : ICalendar) &#x3D;&gt; {
+          //   return iCalendar;
+          // });
+
+          this.model &#x3D; result.result[0];
+          console.log(this.model);
+        }
+      },
+      (err) &#x3D;&gt; {
+        console.log(err);
+      }
+    );
+  }
+
+  activeModeChange(data, e) {
+    console.log(data);
+    this.model.inactive &#x3D; data &#x3D;&#x3D; &#x27;Y&#x27; ? &#x27;N&#x27; : &#x27;Y&#x27;;
+    // let calenderID &#x3D; data.calendarId;
+    // delete data.calendarId;
+    // this.masterDataManagementService.updateCohort(cohortId, data).subscribe(
+    //   (result) &#x3D;&gt; {
+    //     console.log(result);
+    //     // let index &#x3D; this.cohortDatasource.findIndex((cohort) &#x3D;&gt; cohort.id &#x3D;&#x3D;&#x3D; data.id );
+    //     // if(index !&#x3D;&#x3D; -1){
+    //     //   this.cohortDatasource[index].is_active &#x3D; result.result.is_active
+
+    //     // }
+    //     this.getCohortListByProgramID();
+    //   },
+    //   (err) &#x3D;&gt; {
+    //     console.log(err);
+    //   }
+    // );
+  }
+  onSubmit(e){
+    const { isValid } &#x3D; ValidationEngine.validateGroup(&#x27;validationGrp&#x27;);
+    if (isValid) {
+      console.log(this.model);
+      if(this.editMode){
+        // PUT
+        this.commonSettingService.updateCalender(this.model).subscribe(
+          (result) &#x3D;&gt; {
+            if(result.statusCode &#x3D;&#x3D; 200){
+              console.log(result.result);
+              this.globalService.showSwal(&#x27;SUCCESS&#x27;, &#x27;Successfully update a calender&#x27;, &#x27;success&#x27;);
+              this.clearField();
+            }
+          },
+          (err) &#x3D;&gt; {
+            console.log(err);
+          });
+      } else {
+        // POST
+      delete this.model.calendarId;
+
+      this.model.fromDate &#x3D; this.model.fromDate.toLocaleString();
+      this.model.toDate &#x3D; this.model.toDate.toLocaleString();
+      this.model.openDate &#x3D; this.model.openDate.toLocaleString();
+      this.model.closeDate &#x3D; this.model.closeDate.toLocaleString();
+
+      this.commonSettingService.createCalender(this.model).subscribe(
+      (result) &#x3D;&gt; {
+        if(result.statusCode &#x3D;&#x3D; 200){
+          console.log(result.result);
+          this.globalService.showSwal(&#x27;SUCCESS&#x27;, &#x27;Successfully create a calender&#x27;, &#x27;success&#x27;);
+          this.clearField();
+        }
+      },
+      (err) &#x3D;&gt; {
+        console.log(err);
+        this.globalService.showSwal(&#x27;ERROR&#x27;, err, &#x27;error&#x27;);
+
+      });
+
+      }
+    }
+  }
+  clearField() {
+    ValidationEngine.resetGroup(&#x27;validationGrp&#x27;);
+    //this.model &#x3D; {};
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content-wrapper&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-12 grid-margin stretch-card&quot;&gt;
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-12 col-xl-12 mb-4 mb-xl-0 &quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+              &lt;div style&#x3D;&quot;display: flex;&quot;&gt;
+                &lt;div style&#x3D;&quot;flex: 1;&quot;&gt;
+                  &lt;h2 class&#x3D;&quot;card-title&quot;&gt;Calender&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;newButtonAlignrigt&quot; style&#x3D;&quot;flex: 1;&quot;&gt;
+                  &lt;div &gt;
+                    &lt;span class&#x3D;&quot;cursor&quot; [routerLink]&#x3D;&quot;[&#x27;../calender&#x27;]&quot;&gt;
+                      &lt;img style&#x3D;&quot;width: 4%; &quot; src&#x3D;&quot;./assets/images/left-arrow-ash.png&quot; alt&#x3D;&quot;&quot;&gt;Back To List
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;!-- &lt;dx-button type&#x3D;&quot;normal&quot; text&#x3D;&quot;Go back to list&quot;  [routerLink]&#x3D;&quot;[&#x27;../asset&#x27;]&quot;&gt;&lt;/dx-button&gt; --&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;p class&#x3D;&quot;card-description&quot;&gt;{{editMode &#x3D;&#x3D; true ? &#x27;Edit &#x27; : &#x27;Add New &#x27;}}Calender &lt;/p&gt;
+              &lt;div class&#x3D;&quot;row&quot;&gt;
+                &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+                  &lt;div class&#x3D;&quot;form-group row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Calendar Name&lt;/label&gt;
+                      &lt;dx-text-box placeholder&#x3D;&quot;Calender Name&quot; [(ngModel)]&#x3D;&quot;model.calendarName&quot;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Calendar Name Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-text-box&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Financial Year&lt;/label&gt;
+                      &lt;dx-text-box placeholder&#x3D;&quot;Financial Year&quot; [(ngModel)]&#x3D;&quot;model.financialYear&quot;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Financial Year Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-text-box&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;form-group row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Calendar Year From Date&lt;/label&gt;
+                      &lt;dx-date-box [(ngModel)]&#x3D;&quot;model.fromDate&quot; type&#x3D;&quot;date&quot; displayFormat&#x3D;&#x27;dd/MMM/yyyy&#x27;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;From Date Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-date-box&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Calendar Year To Date&lt;/label&gt;
+                      &lt;dx-date-box [(ngModel)]&#x3D;&quot;model.toDate&quot; type&#x3D;&quot;date&quot; displayFormat&#x3D;&#x27;dd/MMM/yyyy&#x27;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;To Date Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-date-box&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;form-group row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Budget Open Date&lt;/label&gt;
+                      &lt;dx-date-box [(ngModel)]&#x3D;&quot;model.openDate&quot; type&#x3D;&quot;date&quot; displayFormat&#x3D;&#x27;dd/MMM/yyyy&#x27;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Open Date Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-date-box&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Budget Close Date&lt;/label&gt;
+                      &lt;dx-date-box [(ngModel)]&#x3D;&quot;model.closeDate&quot; type&#x3D;&quot;date&quot; displayFormat&#x3D;&#x27;dd/MMM/yyyy&#x27;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Close Date Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-date-box&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;form-group row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Remarks&lt;/label&gt;
+                      &lt;dx-text-box placeholder&#x3D;&quot;Remarks&quot; [(ngModel)]&#x3D;&quot;model.remarks&quot;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Remarks Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-text-box&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+                      &lt;label class&#x3D;&quot;col-form-label&quot;&gt;Active&lt;/label&gt;
+                      &lt;div&gt;
+                        &lt;span *ngIf&#x3D;&quot;model.inactive &#x3D;&#x3D; &#x27;N&#x27;&quot;&gt;
+                          &lt;img class&#x3D;&quot;icon-size30 cursor&quot; style&#x3D;&quot;width: 55px;&quot; src&#x3D;&quot;./assets/images/onBtn.PNG&quot; (click)&#x3D;&quot;activeModeChange(model.inactive, $event)&quot; alt&#x3D;&quot;Active&quot;  title&#x3D;&quot;Active&quot;&gt;
+                        &lt;/span&gt;
+                        &lt;span  *ngIf&#x3D;&quot;model.inactive &#x3D;&#x3D; &#x27;Y&#x27; || model.inactive &#x3D;&#x3D; null&quot;&gt;
+                          &lt;img class&#x3D;&quot;icon-size30 cursor&quot; style&#x3D;&quot;width: 55px;&quot; src&#x3D;&quot;./assets/images/offBtn.PNG&quot; (click)&#x3D;&quot;activeModeChange(model.inactive, $event)&quot;  alt&#x3D;&quot;Inactive&quot; title&#x3D;&quot;Inactive&quot;&gt;
+                        &lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;!-- &lt;dx-text-box placeholder&#x3D;&quot;Name of Cohort&quot; [(ngModel)]&#x3D;&quot;model.inactive&quot;&gt;
+                        &lt;dx-validator validationGroup&#x3D;&quot;validationGrp&quot;&gt;
+                          &lt;dxi-validation-rule type&#x3D;&quot;required&quot; message&#x3D;&quot;Inactive Required&quot;&gt;&lt;/dxi-validation-rule&gt;
+                      &lt;/dx-validator&gt;
+                      &lt;/dx-text-box&gt; --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;center&quot;&gt;
+                    &lt;dx-button class&#x3D;&quot;themeButton&quot; (onClick)&#x3D;&quot;onSubmit($event)&quot; [text]&#x3D;&quot;editMode ? &#x27;Update&#x27;: &#x27;Save&#x27;&quot; &gt;&lt;/dx-button&gt;
+                  &lt;/div&gt;
+                    &lt;dx-validation-summary&gt;&lt;/dx-validation-summary&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./calender-add.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="content-wrapper">  <div class="row">    <div class="col-12 grid-margin stretch-card">      <div class="card">        <div class="row">          <div class="col-12 col-xl-12 mb-4 mb-xl-0 ">            <div class="card-body">              <div style="display: flex;">                <div style="flex: 1;">                  <h2 class="card-title">Calender</h2>                </div>                <div class="newButtonAlignrigt" style="flex: 1;">                  <div >                    <span class="cursor" [routerLink]="[\'../calender\']">                      <img style="width: 4%; " src="./assets/images/left-arrow-ash.png" alt="">Back To List                    </span>                  </div>                  <!-- <dx-button type="normal" text="Go back to list"  [routerLink]="[\'../asset\']"></dx-button> -->                </div>              </div>              <p class="card-description">{{editMode == true ? \'Edit \' : \'Add New \'}}Calender </p>              <div class="row">                <div class="col-md-12">                  <div class="form-group row">                    <div class="col-sm-6">                      <label class="col-form-label">Calendar Name</label>                      <dx-text-box placeholder="Calender Name" [(ngModel)]="model.calendarName">                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="Calendar Name Required"></dxi-validation-rule>                      </dx-validator>                      </dx-text-box>                    </div>                    <div class="col-sm-6">                      <label class="col-form-label">Financial Year</label>                      <dx-text-box placeholder="Financial Year" [(ngModel)]="model.financialYear">                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="Financial Year Required"></dxi-validation-rule>                      </dx-validator>                      </dx-text-box>                    </div>                  </div>                  <div class="form-group row">                    <div class="col-sm-6">                      <label class="col-form-label">Calendar Year From Date</label>                      <dx-date-box [(ngModel)]="model.fromDate" type="date" displayFormat=\'dd/MMM/yyyy\'>                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="From Date Required"></dxi-validation-rule>                      </dx-validator>                      </dx-date-box>                    </div>                    <div class="col-sm-6">                      <label class="col-form-label">Calendar Year To Date</label>                      <dx-date-box [(ngModel)]="model.toDate" type="date" displayFormat=\'dd/MMM/yyyy\'>                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="To Date Required"></dxi-validation-rule>                      </dx-validator>                      </dx-date-box>                    </div>                  </div>                  <div class="form-group row">                    <div class="col-sm-6">                      <label class="col-form-label">Budget Open Date</label>                      <dx-date-box [(ngModel)]="model.openDate" type="date" displayFormat=\'dd/MMM/yyyy\'>                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="Open Date Required"></dxi-validation-rule>                      </dx-validator>                      </dx-date-box>                    </div>                    <div class="col-sm-6">                      <label class="col-form-label">Budget Close Date</label>                      <dx-date-box [(ngModel)]="model.closeDate" type="date" displayFormat=\'dd/MMM/yyyy\'>                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="Close Date Required"></dxi-validation-rule>                      </dx-validator>                      </dx-date-box>                    </div>                  </div>                  <div class="form-group row">                    <div class="col-sm-6">                      <label class="col-form-label">Remarks</label>                      <dx-text-box placeholder="Remarks" [(ngModel)]="model.remarks">                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="Remarks Required"></dxi-validation-rule>                      </dx-validator>                      </dx-text-box>                    </div>                    <div class="col-sm-6">                      <label class="col-form-label">Active</label>                      <div>                        <span *ngIf="model.inactive == \'N\'">                          <img class="icon-size30 cursor" style="width: 55px;" src="./assets/images/onBtn.PNG" (click)="activeModeChange(model.inactive, $event)" alt="Active"  title="Active">                        </span>                        <span  *ngIf="model.inactive == \'Y\' || model.inactive == null">                          <img class="icon-size30 cursor" style="width: 55px;" src="./assets/images/offBtn.PNG" (click)="activeModeChange(model.inactive, $event)"  alt="Inactive" title="Inactive">                        </span>                      </div>                      <!-- <dx-text-box placeholder="Name of Cohort" [(ngModel)]="model.inactive">                        <dx-validator validationGroup="validationGrp">                          <dxi-validation-rule type="required" message="Inactive Required"></dxi-validation-rule>                      </dx-validator>                      </dx-text-box> -->                    </div>                  </div>                  <div class="center">                    <dx-button class="themeButton" (onClick)="onSubmit($event)" [text]="editMode ? \'Update\': \'Save\'" ></dx-button>                  </div>                    <dx-validation-summary></dx-validation-summary>                </div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ActionWorkflowComponent', 'selector': 'app-action-workflow'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetCatagoryComponent', 'selector': 'app-asset-catagory'},{'name': 'AssetsComponent', 'selector': 'app-assets'},{'name': 'BudgetListComponent', 'selector': 'app-budget-list'},{'name': 'CalenderAddComponent', 'selector': 'app-calender-add'},{'name': 'CalenderComponent', 'selector': 'app-calender'},{'name': 'CapitalBudgetAddComponent', 'selector': 'app-capital-budget-add'},{'name': 'CommonBdgtAddComponent', 'selector': 'app-common-bdgt-add'},{'name': 'CommonBudgetTypeComponent', 'selector': 'app-common-budget-type'},{'name': 'ExpenseAddComponent', 'selector': 'app-expense-add'},{'name': 'ExpenseListComponent', 'selector': 'app-expense-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InitBudgetComponent', 'selector': 'app-init-budget'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainLayoutComponent', 'selector': 'app-main-layout'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NoaAssignmentCommonBdgtComponent', 'selector': 'app-noa-assignment-common-bdgt'},{'name': 'NoaAssignmentComponent', 'selector': 'app-noa-assignment'},{'name': 'OrgSetupComponent', 'selector': 'app-org-setup'},{'name': 'ProductionBdgtAddComponent', 'selector': 'app-production-bdgt-add'},{'name': 'RmpmBdgtAddComponent', 'selector': 'app-rmpm-bdgt-add'},{'name': 'StoreSpareAddComponent', 'selector': 'app-store-spare-add'},{'name': 'StoreSpareFilesComponent', 'selector': 'app-store-spare-files'},{'name': 'UploaderFromExcelComponent', 'selector': 'app-uploader-from-excel'},{'name': 'UserSettingAssignmentComponent', 'selector': 'app-user-setting-assignment'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'},{'name': 'WorkflowActionLogHistoryComponent', 'selector': 'app-workflow-action-log-history'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CalenderAddComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CalenderAddComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

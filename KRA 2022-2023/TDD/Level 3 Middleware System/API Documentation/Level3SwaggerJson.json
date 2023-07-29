@@ -1,0 +1,3768 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Account/login": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToReturnDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToReturnDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToReturnDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Account/GetRouteResp": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "routeName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Account": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToReturnDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToReturnDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToReturnDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Account/hr-employee": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HrEmployeeView"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HrEmployeeView"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HrEmployeeView"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/batch-master-list": {
+      "get": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchMasterVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchMasterVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchMasterVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/batch-master-by-number": {
+      "get": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchMasterVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchMasterVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchMasterVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/batch-master-update": {
+      "post": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3BatchMasterVM"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3BatchMasterVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3BatchMasterVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3BatchMasterVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/batch-details": {
+      "get": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/batch-details-update": {
+      "post": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/ingredients-by-mid": {
+      "get": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3BatchDetailsVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/global-param": {
+      "get": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3GlobalParamVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3GlobalParamVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3GlobalParamVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BatchMaster/update-global-param": {
+      "post": {
+        "tags": [
+          "BatchMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3GlobalParamVM"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3GlobalParamVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3GlobalParamVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/L3GlobalParamVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ItemMap/item-list": {
+      "get": {
+        "tags": [
+          "ItemMap"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Grade",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Dia",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LineType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Subinventory",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MapidPk",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InventoryItemId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PInsType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ItemMap/grade-list-by-org": {
+      "get": {
+        "tags": [
+          "ItemMap"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Grade",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Dia",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LineType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Subinventory",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MapidPk",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InventoryItemId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PInsType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ItemMap/dia-list-by-grade": {
+      "get": {
+        "tags": [
+          "ItemMap"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Grade",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Dia",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LineType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Subinventory",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MapidPk",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InventoryItemId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PInsType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ItemMap/length-list-by-grade-dia": {
+      "get": {
+        "tags": [
+          "ItemMap"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Grade",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Dia",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LineType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Subinventory",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MapidPk",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InventoryItemId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PInsType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ItemMap/update-item": {
+      "post": {
+        "tags": [
+          "ItemMap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ItemMapVM"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PhysicalInspection/create": {
+      "post": {
+        "tags": [
+          "PhysicalInspection"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PhysicalInspection/get-by-id": {
+      "get": {
+        "tags": [
+          "PhysicalInspection"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3PhysicalInspectionVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PhysicalInspection/process-validation": {
+      "get": {
+        "tags": [
+          "PhysicalInspection"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PhysicalInspection/physicalIns-to-interface-pkg": {
+      "get": {
+        "tags": [
+          "PhysicalInspection"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PhysicalInspection/get-billet-data-by-batchNo": {
+      "get": {
+        "tags": [
+          "PhysicalInspection"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3_ST2_CCM_PRODUCT_DATA"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3_ST2_CCM_PRODUCT_DATA"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3_ST2_CCM_PRODUCT_DATA"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProcessParameter/get-by-id": {
+      "get": {
+        "tags": [
+          "ProcessParameter"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProcessParameter/update": {
+      "post": {
+        "tags": [
+          "ProcessParameter"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ProcessParameterVM"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/QualityResult/get-by-id": {
+      "get": {
+        "tags": [
+          "QualityResult"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3QualityResultVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3QualityResultVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3QualityResultVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Resource/get-by-id": {
+      "get": {
+        "tags": [
+          "Resource"
+        ],
+        "parameters": [
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HrEmpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BatchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MIDFK",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrgId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "ParamName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MaterialType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BatchNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AppId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Resource/update": {
+      "post": {
+        "tags": [
+          "Resource"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/L3ResourcesVM"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HrEmployeeView": {
+        "type": "object",
+        "properties": {
+          "empID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "employeeName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3_ST2_CCM_PRODUCT_DATA": {
+        "type": "object",
+        "properties": {
+          "reporT_COUNTER": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "batcH_NO": {
+            "type": "string",
+            "nullable": true
+          },
+          "recipe": {
+            "type": "string",
+            "nullable": true
+          },
+          "producT_GRADE": {
+            "type": "string",
+            "nullable": true
+          },
+          "stranD_NO": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proD_CNT": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "producT_TYPE": {
+            "type": "string",
+            "nullable": true
+          },
+          "length": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "width": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "weight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cuT_TIME": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "moulD_LEVEL": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "castinG_SPEED": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "moulD_OSCSTROKE": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3BatchDetailsVM": {
+        "type": "object",
+        "properties": {
+          "didPk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "midFk": {
+            "type": "string",
+            "nullable": true
+          },
+          "inventoryItemId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "l2MaterialName": {
+            "type": "string",
+            "nullable": true
+          },
+          "weight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "calculatedWeight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "transectedWeight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "originalQuantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "materialSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "materialType": {
+            "type": "string",
+            "nullable": true
+          },
+          "yieldContribution": {
+            "type": "string",
+            "nullable": true
+          },
+          "materialLineId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "errorMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManual": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "hmsAdjusted": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "itemCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemDescription": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3BatchMasterVM": {
+        "type": "object",
+        "properties": {
+          "midPk": {
+            "type": "number",
+            "format": "double"
+          },
+          "batchNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "batchId": {
+            "type": "number",
+            "format": "double"
+          },
+          "orgId": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "stage": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastProcessMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "warningMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDummyBatch": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManual": {
+            "type": "string",
+            "nullable": true
+          },
+          "productGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "productDia": {
+            "type": "string",
+            "nullable": true
+          },
+          "shiftCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "ifStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ifEndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ifModule": {
+            "type": "string",
+            "nullable": true
+          },
+          "lrfStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lrfEndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lrfModule": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccmStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ccmEndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ccmModule": {
+            "type": "string",
+            "nullable": true
+          },
+          "recipeValidityRuleId": {
+            "type": "number",
+            "format": "double"
+          },
+          "recipeId": {
+            "type": "number",
+            "format": "double"
+          },
+          "fgSourceWeight": {
+            "type": "number",
+            "format": "double"
+          },
+          "fgCalculatedWeight": {
+            "type": "number",
+            "format": "double"
+          },
+          "fgDiff": {
+            "type": "number",
+            "format": "double"
+          },
+          "physicalInputUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "physicalInputUserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "physicalInputTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isHmsAdjusted": {
+            "type": "number",
+            "format": "double"
+          },
+          "processStartTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "processEndTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "heatposition": {
+            "type": "string",
+            "nullable": true
+          },
+          "wInsertDt": {
+            "$ref": "#/components/schemas/TimeSpan"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "crucible": {
+            "type": "string",
+            "nullable": true
+          },
+          "recipe_No": {
+            "type": "string",
+            "nullable": true
+          },
+          "recipe_Version": {
+            "type": "number",
+            "format": "double"
+          },
+          "org_Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3GlobalParamVM": {
+        "type": "object",
+        "properties": {
+          "gvidPk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "number",
+            "format": "double"
+          },
+          "paramName": {
+            "type": "string",
+            "nullable": true
+          },
+          "paramValueNumber": {
+            "type": "number",
+            "format": "double"
+          },
+          "paramValueChar": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "userDefinedParamName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3ItemMapVM": {
+        "type": "object",
+        "properties": {
+          "mapidPk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "number",
+            "format": "double"
+          },
+          "inventoryItemId": {
+            "type": "number",
+            "format": "double"
+          },
+          "itemCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "subinventory": {
+            "type": "string",
+            "nullable": true
+          },
+          "locator": {
+            "type": "string",
+            "nullable": true
+          },
+          "l2Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "linetype": {
+            "type": "string",
+            "nullable": true
+          },
+          "grade": {
+            "type": "string",
+            "nullable": true
+          },
+          "dia": {
+            "type": "string",
+            "nullable": true
+          },
+          "lengthInMm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pInsType": {
+            "type": "string",
+            "nullable": true
+          },
+          "formulaBase": {
+            "type": "string",
+            "nullable": true
+          },
+          "formulaVal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "formulaActive": {
+            "type": "string",
+            "nullable": true
+          },
+          "reorderLevel": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "minVal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maxVal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fixedLotNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "uom": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3PhysicalInspectionVM": {
+        "type": "object",
+        "properties": {
+          "lpimidPk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "midFk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "batchNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "orgId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "grade": {
+            "type": "string",
+            "nullable": true
+          },
+          "dia": {
+            "type": "string",
+            "nullable": true
+          },
+          "lengthInMm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isPrimeProduct": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "conPcs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "conKgs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "nonconPcs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "nonconKgs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalPcs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalKgs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "perMtrWeightKgs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "pInsType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3ProcessParameterVM": {
+        "type": "object",
+        "properties": {
+          "rsintidPk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "midFk": {
+            "type": "number",
+            "format": "double"
+          },
+          "pmidFk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "batchStepNo": {
+            "type": "number",
+            "format": "double"
+          },
+          "activityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "resourceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "processParameterName": {
+            "type": "string",
+            "nullable": true
+          },
+          "parameterValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "sourceParameterValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3QualityResultVM": {
+        "type": "object",
+        "properties": {
+          "qridPk": {
+            "type": "number",
+            "format": "double"
+          },
+          "midFk": {
+            "type": "number",
+            "format": "double"
+          },
+          "batchStepNo": {
+            "type": "number",
+            "format": "double"
+          },
+          "testId": {
+            "type": "number",
+            "format": "double"
+          },
+          "testName": {
+            "type": "string",
+            "nullable": true
+          },
+          "resultValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "L3ResourcesVM": {
+        "type": "object",
+        "properties": {
+          "rsintidPk": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "midFk": {
+            "type": "number",
+            "format": "double"
+          },
+          "batchStepNo": {
+            "type": "number",
+            "format": "double"
+          },
+          "activityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "resourceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "resourceUsage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "sourceResourceUsage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastUpdateBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "userDefinedName": {
+            "type": "string",
+            "nullable": true
+          },
+          "updateStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MenuItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "menushortname": {
+            "type": "string",
+            "nullable": true
+          },
+          "menutooltip": {
+            "type": "string",
+            "nullable": true
+          },
+          "menudeschelp": {
+            "type": "string",
+            "nullable": true
+          },
+          "routE_NAME": {
+            "type": "string",
+            "nullable": true
+          },
+          "caninsert": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "candelete": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "canupdate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appRouteName": {
+            "type": "string",
+            "nullable": true
+          },
+          "menuGroupRouteName": {
+            "type": "string",
+            "nullable": true
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "expanded": {
+            "type": "boolean"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeSpan": {
+        "type": "object",
+        "properties": {
+          "ticks": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "days": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hours": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "milliseconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minutes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalDays": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalHours": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalMilliseconds": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalMinutes": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "totalSeconds": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserMenu": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserToReturnDto": {
+        "type": "object",
+        "properties": {
+          "logUserID": {
+            "type": "string",
+            "nullable": true
+          },
+          "bmUserId": {
+            "type": "number",
+            "format": "double"
+          },
+          "hrEmpId": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "appId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "roleIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "userMenus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserMenu"
+            },
+            "nullable": true
+          },
+          "menus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
